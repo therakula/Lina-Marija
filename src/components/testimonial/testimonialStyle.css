@@ -1,0 +1,136 @@
+.testimonial-section {
+  background-color: var(--lightColor);
+  color: var(--darkColor);
+  font-family: "Cabin-Regular", serif;
+
+  & h2 {
+    position: relative;
+    margin-block-end: 2rem;
+    z-index: 100;
+  }
+
+  & p {
+    /* min: 20px max: 24px */
+    font-size: clamp(1.25rem, 0.256vw + 1.192rem, 1.5rem);
+    line-height: 1.4;
+  }
+}
+
+.testimonial-title {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.testimonial-wrap {
+  --q-mark-width: 180px;
+  /* overflow: hidden; */
+  position: relative;
+
+  & .q-marks {
+    width: var(--q-mark-width);
+    position: absolute;
+    top: calc((var(--q-mark-width) / 2) * -1);
+    left: -10px;
+    rotate: 180deg;
+    opacity: 0.3;
+  }
+}
+
+.testimonial-wrap-inner {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.2s ease-in-out;
+
+  & > * {
+    flex: 1 0 100%;
+  }
+}
+
+.testimonial {
+  padding-inline: 1rem;
+}
+
+.testimonial-avatars {
+  --gap: 10px;
+  --avatar-width: 70px;
+  width: min(100% - 100px, 280px);
+  margin-block-start: 4rem;
+  margin-inline-end: auto;
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+  flex-direction: row;
+  max-width: 100%;
+  padding-block-end: 5px;
+
+  & > * {
+    flex-basis: var(--avatar-width);
+    border-radius: 50%;
+    padding: 3px;
+  }
+
+  & > *:hover {
+    cursor: pointer;
+  }
+}
+
+.active {
+  outline: 1px solid orange;
+}
+
+/* testimonial Swiper */
+
+.testimonial-swiper [class*="swiper-button-"] {
+  color: orange;
+}
+
+.testimonial-swiper .swiper-slide {
+  padding-inline: 3rem;
+}
+
+.testimonial-swiper .testimonial-name-image__wrapper {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-block-start: 1rem;
+  font-family: "Cabin-Regular", sans-serif;
+
+  margin-inline-start: 5px;
+  display: grid;
+  grid-template-columns: 70px min-content min-content;
+  align-items: center;
+  gap: 0.6rem;
+
+  & img {
+    border-radius: 50%;
+    padding: 2px;
+  }
+}
+
+.swiper-item_-wrapper {
+  transition: all 0.6s ease-in;
+}
+
+.testimonial-swiper .swiper {
+  display: grid;
+  grid-template-rows: 1fr 40px;
+}
+
+.testimonial-swiper .swiper-pagination {
+  grid-row: 2/-1;
+}
+
+.testimonial-swiper .swiper-pagination-bullet {
+  --size: 12px;
+  width: var(--size);
+  height: var(--size);
+}
+.testimonial-swiper .swiper-pagination-bullet-active {
+  background-color: var(--accentColor);
+  scale: 1.2;
+}
+
+@media screen and (width<650px) {
+  .testimonial-swiper .swiper-slide {
+    padding-inline: 0;
+  }
+}

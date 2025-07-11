@@ -1,0 +1,33 @@
+.about-section {
+  background-color: var(--lightColor);
+  color: var(--darkColor);
+}
+
+.about-title {
+  opacity: 0;
+}
+
+p {
+  /* min: 19px  max: 22px*/
+  font-size: clamp(1.313rem, 0.197vw + 1.263rem, 1.5rem);
+  margin-block-start: 0;
+  line-height: 1.4;
+  max-width: 70ch;
+}
+
+.margin-block-start-l {
+  margin-block-start: 1rem;
+}
+
+.img-wrapper {
+  overflow: hidden;
+  margin-block: 1rem;
+}
+
+.about-img {
+  transition: all 0.3s ease-in-out;
+}
+
+.about-img:hover {
+  scale: 1.1;
+}

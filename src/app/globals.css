@@ -1,13 +1,33 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* colors */
+  --lightColor: #f9f6e6;
+  --darkColor: #12222a;
+  --accentColor: rgb(233, 157, 16);
+
+  --scroll-padding-top: 124px;
+
+  /* burger menu */
+  --bar-height: 4px;
+  --bar-width: 25px;
+  --gap: 4px;
+  --animation-timing: 300ms ease-in-out;
+  --burger-height: calc(var(--bar-height) * 3 + var(--bar-height) * 2);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "Cabin-Regular";
+  src: url("/fonts/Cabin-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rosehot";
+  src: url("/fonts/Rosehot.ttf") format("truetype");
+}
+
+html {
+  background-color: rgb(25, 35, 39);
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding-top);
 }
 
 html,
@@ -30,13 +50,74 @@ body {
   margin: 0;
 }
 
+*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  font-family: "Cabin-Regular", serif;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.layout {
+  --padding-inline: 1.8rem;
+  --content-max-width: 900px;
+  --breakout-max-width: 1200px;
+  --images-max-width: 1600px;
+
+  --breakout-size: calc(
+    (var(--breakout-max-width) - var(--content-max-width)) / 2
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr)
+    [breakout-start] minmax(0, var(--breakout-size))
+    [content-start] min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    )
+    [content-end]
+    minmax(0, var(--breakout-size)) [breakout-end]
+    minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.layout > * {
+  grid-column: content;
+}
+
+.layout > .breakout {
+  grid-column: breakout;
+}
+
+.layout > .full-width {
+  grid-column: full-width;
+}
+.section {
+  padding-block-start: 8rem;
+  padding-block-end: 6rem;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+@media screen and (width < 1200px) {
+  .section {
+    padding-block: 6rem;
+  }
+}
+
+@media screen and (width < 600px) {
+  .section {
+    padding-block-start: 5rem;
+    padding-block-end: 2rem;
   }
 }

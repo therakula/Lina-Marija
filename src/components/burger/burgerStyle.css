@@ -1,0 +1,44 @@
+.burger-label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  --x-width: calc(var(--burger-height) * 1.414);
+  z-index: 200;
+}
+
+span.burger-bar {
+  display: block;
+  position: relative;
+  width: var(--bar-width);
+  height: var(--bar-height);
+  top: 0;
+  background-color: var(--darkColor);
+  transform-origin: left center;
+  transition: width var(--animation-timing), opacity var(--animation-timing),
+    rotate var(--animation-timing);
+}
+
+input[name="burger-checkbox"] {
+  display: none;
+}
+
+.burger-label:has(input:checked) .burger-bar:nth-of-type(1) {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+  /* width: hypot(25px, 25px); */
+}
+.burger-label:has(input:checked) .burger-bar:nth-of-type(2) {
+  width: 0;
+  opacity: 0;
+}
+.burger-label:has(input:checked) .burger-bar:nth-of-type(3) {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+  /* width: hypot(25px, 25px); */
+}
+
+.burger-label:has(input:checked) span.burger-bar {
+  background-color: var(--accentColor);
+}

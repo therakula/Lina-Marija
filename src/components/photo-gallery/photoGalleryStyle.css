@@ -1,0 +1,21 @@
+section.photo-gallery {
+  position: relative;
+  background-color: var(--lightColor);
+}
+
+.photo-section__title {
+  margin-block-end: 2rem;
+  color: var(--darkColor);
+}
+
+.react-photo-album--button {
+  overflow: hidden;
+}
+
+img.react-photo-album--image {
+  transition: scale 0.2s ease-in-out;
+}
+
+img.react-photo-album--image:hover {
+  scale: 1.1;
+}
