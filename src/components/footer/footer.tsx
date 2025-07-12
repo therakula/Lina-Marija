@@ -11,17 +11,20 @@ const Footer = () => {
       <div className="footer-content breakout">
         <Title as="h3">Lina Marija</Title>
         <div className="about">
-          <Title as="h4">About</Title>
+          <Title as="h4">O Nama</Title>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Consequuntur fuga vitae qui iure quaerat hic dicta ratione odio
-            dolorem debitis saepe, facere molestiae pariatur! Tenetur cum ad
-            earum est, quo impedit? Iusto dolores optio repellat cum nostrum.
-            Modi, quam sequi.
+            Naša brvnara, „Lina-Marija“, napravljena je u potpunosti od drveta i
+            izrađena sa ljubavlju. Nudimo pravo opuštanje, daleko od turističkih
+            sela, i dočekujemo one koji traže prirodu, seosku idilu, avanturu i
+            opuštanje. U zavisnosti od vremena, kuća nudi zadivljujući pogled na
+            okolne planine i borove šume koje će umiriti vašu dušu. Izlazak i
+            zalazak sunca mogu se doživeti iz kuće. U krugu od 100 km nalaze se
+            prelepa prirodna područja i zanimljive znamenitosti. I, naravno,
+            zimski sportovi na obližnjem Zlatiboru.
           </p>
         </div>
         <div className="contact">
-          <Title as="h4">Contact Us</Title>
+          <Title as="h4">Kontakt</Title>
           <div className="phone">
             <span>
               <FaPhone className="icon" />{" "}

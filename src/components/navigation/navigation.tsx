@@ -111,13 +111,15 @@ const Navigation = () => {
         </ul>
 
         {width && width > 700 ? (
-          <div className="cta-btn">
-            <Link
-              href="https://www.booking.com/hotel/rs/lina-maria-holiday-home-zlatibor.sr.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-btn__link"
-            />
+          <div className="cta-btn--wrapper">
+            <div className="cta-btn">
+              <Link
+                href="https://www.booking.com/hotel/rs/lina-maria-holiday-home-zlatibor.sr.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-btn__link"
+              />
+            </div>
           </div>
         ) : (
           <BurgetButton />

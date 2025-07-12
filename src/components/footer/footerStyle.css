@@ -33,6 +33,10 @@
   flex: 1 1 0;
 }
 
+.about {
+  flex: 2 1 0;
+}
+
 .rights {
   margin-block-start: 2em;
   /* flex: 1 0 100%; */

@@ -159,11 +159,26 @@ ul.navigation-links li:hover::before {
   }
 }
 
+@media screen and (width <= 960px) {
+  ul.navigation-links {
+    gap: 0.6rem;
+  }
+  .navigation-wrapper {
+    flex-wrap: wrap;
+  }
+  .cta-btn--wrapper {
+    flex-basis: 100%;
+  }
+  .cta-btn {
+    margin-inline-start: auto;
+  }
+}
+
 @media screen and (width <= 700px) {
   .cta-btn {
     display: none;
   }
-  .navigation-links {
+  ul.navigation-links {
     display: none;
   }
 }
