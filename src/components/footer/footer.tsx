@@ -1,7 +1,13 @@
-import "./footerStyle.css";
-
+import Link from "next/link";
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
+import {
+  TbBrandBooking,
+  TbBrandAirbnb,
+  TbBrandInstagram
+} from "react-icons/tb";
+
+import "./footerStyle.css";
 
 import { Title } from "../title/title";
 
@@ -36,6 +42,17 @@ const Footer = () => {
               <IoMdMail className="icon" />{" "}
             </span>
             <span>contact@linamarija.com</span>
+          </div>
+          <div className="social-icons">
+            <Link href="">
+              <TbBrandBooking className="social-icons--icon" />
+            </Link>
+            <Link href="">
+              <TbBrandAirbnb className="social-icons--icon" />
+            </Link>
+            <Link href="">
+              <TbBrandInstagram className="social-icons--icon" />
+            </Link>
           </div>
         </div>
 

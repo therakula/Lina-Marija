@@ -11,6 +11,7 @@ import "./aboutUsStyle.css";
 
 const AboutUs = () => {
   useGSAP(() => {
+    // FOR TEXT
     const tl = gsap.timeline({
       ease: "power3.in",
       scrollTrigger: {
@@ -42,6 +43,23 @@ const AboutUs = () => {
         y: 0,
         autoAlpha: 1,
         filter: "blur(0)"
+      }
+    );
+
+    // FOR IMAGE
+    gsap.fromTo(
+      ".img-wrapper",
+      {
+        autoAlpha: 0,
+        filter: "blur(8px)"
+      },
+      {
+        autoAlpha: 1,
+        filter: "blur(0)",
+        scrollTrigger: {
+          trigger: ".img-wrapper",
+          start: "top 80%"
+        }
       }
     );
   });

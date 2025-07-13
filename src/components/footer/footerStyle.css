@@ -83,6 +83,22 @@
   font-size: 1.4em;
 }
 
+.social-icons {
+  margin-block-start: 0.6rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-icons--icon {
+  font-size: 2.2rem;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    color: var(--lightDarkColor);
+    scale: 1.1;
+  }
+}
+
 @media screen and (width <= 930px) {
   .footer {
     padding-block: 8rem;

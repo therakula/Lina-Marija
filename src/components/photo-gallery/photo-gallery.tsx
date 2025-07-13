@@ -30,12 +30,13 @@ const PhotoGallery = () => {
   }, []);
 
   useGSAP(() => {
+    // TITLE
     gsap.fromTo(
       ".photo-section__title",
       {
         y: 50,
         autoAlpha: 0,
-        filter: "blur(10px)"
+        filter: "blur(8px)"
       },
       {
         y: 0,
@@ -44,7 +45,24 @@ const PhotoGallery = () => {
         ease: "power3.in",
         scrollTrigger: {
           trigger: ".photo-gallery",
-          start: "top 70%"
+          start: "top 80%"
+        }
+      }
+    );
+
+    // IMAGES
+    gsap.fromTo(
+      ".photos-container",
+      {
+        autoAlpha: 0,
+        filter: "blur(8px)"
+      },
+      {
+        autoAlpha: 1,
+        filter: "blur(0)",
+        scrollTrigger: {
+          trigger: ".photos-container",
+          start: "top 80%"
         }
       }
     );
@@ -55,7 +73,7 @@ const PhotoGallery = () => {
       <Title as="h2" className="photo-section__title breakout">
         Foto Galerija
       </Title>
-      <div className="breakout">
+      <div className="breakout photos-container">
         <RowsPhotoAlbum
           photos={photos}
           targetRowHeight={300}
