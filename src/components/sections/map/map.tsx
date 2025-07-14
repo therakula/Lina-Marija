@@ -11,12 +11,12 @@ import "./mapStyle.css";
 
 const Map = () => {
   useGSAP(() => {
+    // TEXT
     const tl = gsap.timeline({
       ease: "power3.in",
       scrollTrigger: {
         trigger: ".map-section",
-        start: "top 60%",
-        toggleActions: "play none none none"
+        start: "top 60%"
       }
     });
     tl.fromTo(
@@ -42,6 +42,24 @@ const Map = () => {
         y: 0,
         autoAlpha: 1,
         filter: "blur(0)"
+      }
+    );
+
+    // MAP
+    gsap.fromTo(
+      ".map-wrapper",
+      {
+        autoAlpha: 0,
+        filter: "blur(8px)"
+      },
+      {
+        autoAlpha: 1,
+        filter: "blur(0)",
+        scrollTrigger: {
+          trigger: ".map-wrapper",
+          start: "top 80%"
+        },
+        ease: "power1.in"
       }
     );
   });

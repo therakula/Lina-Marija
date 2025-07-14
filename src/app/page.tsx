@@ -9,6 +9,7 @@ import TestimonialSwiper from "@/components/testimonial/testimonial";
 import Map from "@/components/sections/map/map";
 import AboutUs from "@/components/sections/about-us/aboutUs";
 import PhotoGallery from "@/components/photo-gallery/photo-gallery";
+import FaqsSection from "@/components/sections/faqs/faqs";
 
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 
@@ -80,6 +81,7 @@ export default function Home() {
       <PhotoGallery />
       <Map />
       <TestimonialSwiper />
+      <FaqsSection />
       <ContactForm />
       <Footer />
     </>

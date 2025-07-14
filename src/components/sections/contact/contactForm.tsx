@@ -21,23 +21,33 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+function testAnimation(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+  const btn = document.querySelector(".submit-btn");
+  btn?.classList.add("animation");
+
+  setTimeout(() => {
+    btn?.classList.remove("animation");
+  }, 2000);
+}
+
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
 
-  const [clicked, setClicked] = useState<boolean | undefined>(false);
+  const [btnDisabled, setBtnDisabled] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    if (clicked) {
-      setTimeout(() => setClicked(false), 1000 * 10);
+    if (btnDisabled) {
+      setTimeout(() => setBtnDisabled(false), 1000 * 10);
     }
-  }, [clicked]);
+  }, [btnDisabled]);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
 
-    setClicked(true);
+    setBtnDisabled(true);
 
     if (!(formRef.current instanceof HTMLElement)) return;
 
@@ -71,29 +81,32 @@ const ContactForm = () => {
     setTimeout(() => setLoading(false), 1000 * 2);
   };
 
-  // useGSAP(() => {
-  //   gsap.fromTo(
-  //     ".contact-title",
-  //     {
-  //       y: 50,
-  //       autoAlpha: 0,
-  //       filter: "blur(10px)"
-  //     },
-  //     {
-  //       y: 0,
-  //       autoAlpha: 1,
-  //       filter: "blur(0)",
-  //       ease: "power3.in",
-  //       scrollTrigger: {
-  //         trigger: ".form-section",
-  //         start: "top 70%"
-  //       }
-  //     }
-  //   );
-  // });
+  useGSAP(() => {
+    gsap.fromTo(
+      ".contact-title",
+      {
+        y: 50,
+        autoAlpha: 0,
+        filter: "blur(10px)"
+      },
+      {
+        y: 0,
+        autoAlpha: 1,
+        filter: "blur(0)",
+        ease: "power3.in",
+        scrollTrigger: {
+          trigger: ".form-section",
+          start: "top 70%"
+        }
+      }
+    );
+  });
 
   return (
     <section className="form-section full-width layout section" id="contact">
+      <Title as="h2" className="contact-title">
+        Imate Pitanja? Pišite nam
+      </Title>
       <div className="form-wrapper">
         <div className="form-logo--wrapper">
           <div className="form-logo--wrapper-inner">
@@ -107,10 +120,9 @@ const ContactForm = () => {
             </Link>
           </div>
         </div>
-        <Title as="h2">Contact Us</Title>
-        <form action="" className="form" ref={formRef} onSubmit={sendEmail}>
+        <form action="" className="form" ref={formRef} onSubmit={testAnimation}>
           <div className="form__group">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Ime</label>
             <input
               type="text"
               id="name"
@@ -132,7 +144,7 @@ const ContactForm = () => {
             />
           </div>
           <div className="form__group">
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">Poruka</label>
             <textarea
               id="message"
               rows={10}
@@ -143,7 +155,7 @@ const ContactForm = () => {
           </div>
 
           <button
-            disabled={clicked}
+            disabled={btnDisabled}
             type="submit"
             className={`submit-btn ${loading ? "animation" : ""}`}
           >

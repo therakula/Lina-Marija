@@ -44,10 +44,10 @@ const Footer = () => {
             <span>contact@linamarija.com</span>
           </div>
           <div className="social-icons">
-            <Link href="">
+            <Link href="https://www.booking.com/hotel/rs/lina-maria-holiday-home-zlatibor.sr.html">
               <TbBrandBooking className="social-icons--icon" />
             </Link>
-            <Link href="">
+            <Link href="https://www.airbnb.rs/rooms/1324790299105509344">
               <TbBrandAirbnb className="social-icons--icon" />
             </Link>
             <Link href="">

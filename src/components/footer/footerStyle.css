@@ -2,7 +2,7 @@
   background: #e6b575;
   background: linear-gradient(
     360deg,
-    rgba(230, 181, 117, 0.8) 38%,
+    var(--accentDarkerColor) 38%,
     var(--lightColor) 100%
   );
   position: relative;

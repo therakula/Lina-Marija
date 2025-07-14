@@ -4,6 +4,8 @@
   --clr-error: oklch(59.153% 0.20203 21.222);
   --clr-warning: oklch(95.016% 0.06908 92.115);
 
+  --submit-btn--width: 90px;
+
   --border-radius-xl: 15px;
   --border-radius-l: 10px;
   --border-radius-m: 7px;
@@ -15,8 +17,6 @@
 
   & h2 {
     margin-block-end: 1.5rem;
-    color: var(--lightColor);
-    text-align: center;
   }
 }
 
@@ -78,11 +78,10 @@ textarea:focus:invalid {
 
 /* ---SUBMIT BUTTON--- */
 .submit-btn {
-  --width: 90px;
-  --font-size: calc((var(--width) / 2) - 8px);
+  --font-size: calc((var(--submit-btn--width) / 2) - 8px);
   border-radius: var(--border-radius-s);
   border: none;
-  width: var(--width);
+  width: var(--submit-btn--width);
   aspect-ratio: 2/1;
   font-size: var(--font-size);
   margin-inline: auto;
@@ -128,13 +127,14 @@ textarea[name="message"] {
   width: fit-content;
   font-weight: bold;
   font-family: monospace;
-  font-size: 30px;
-  background: linear-gradient(90deg, #000 50%, #0000 0) right/200% 100%;
+  font-size: calc((var(--submit-btn--width) / 2) - 8px);
+  background: linear-gradient(90deg, var(--darkColor) 50%, var(--accentColor) 0)
+    right/200% 100%;
   animation: l21 2s infinite linear;
 }
 .animation::before {
   content: "";
-  color: #0000;
+  color: var(--darkColor);
   padding: 0 5px;
   background: inherit;
   background-image: linear-gradient(90deg, #fff 50%, #000 0);
@@ -146,9 +146,13 @@ label {
   transition: all 100ms ease-in;
 }
 
-label:has(+ input:focus-within),
-label:has(+ textarea:focus-within) {
+.form-section label:has(+ input:focus-within),
+.form-section label:has(+ textarea:focus-within) {
   color: orange;
+}
+
+input:focus:invalid + .warning {
+  opacity: 1;
 }
 
 @keyframes l21 {

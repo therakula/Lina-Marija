@@ -6,6 +6,7 @@
   --lightDarkColor: oklch(from var(--darkColor) calc(l/2 + 0.3) c h);
   --lightDarkColorTwo: oklch(from var(--darkColor) calc(l/2 + 0.4) c h);
   --accentColor: oklch(75.271% 0.15687 73.799);
+  --accentDarkerColor: oklch(from var(--accentColor) l calc(c/2) h);
 
   --scroll-padding-top: 124px;
 

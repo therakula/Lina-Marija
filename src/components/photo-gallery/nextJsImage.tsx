@@ -1,34 +1,21 @@
 import Image from "next/image";
 
 import {
+  RenderSlideProps,
+  SlideImage,
   isImageFitCover,
   isImageSlide,
   useLightboxProps,
   useLightboxState
 } from "yet-another-react-lightbox";
 
-type Slide = {
-  src: string;
-  width: number;
-  height: number;
+export type CustomSlideImage = SlideImage & {
   blurDataURL?: string;
-  [key: string]: unknown; // allow extra props like `title`, `description`, etc.
 };
 
-type Offset = number;
+type NextJsImageProps = RenderSlideProps<CustomSlideImage>;
 
-type Rect = {
-  width: number;
-  height: number;
-};
-
-interface NextJsImageProps {
-  slide: Slide;
-  offset: Offset;
-  rect: Rect;
-}
-
-function isNextJsImage(slide: Slide) {
+function isNextJsImage(slide: SlideImage): slide is SlideImage {
   return (
     isImageSlide(slide) &&
     typeof slide.width === "number" &&
@@ -47,6 +34,13 @@ export default function NextJsImage({ slide, offset, rect }: NextJsImageProps) {
 
   if (!isNextJsImage(slide)) return undefined;
 
+  if (
+    !isImageSlide(slide) ||
+    typeof slide.width !== "number" ||
+    typeof slide.height !== "number"
+  )
+    return null;
+
   const width = !cover
     ? Math.round(
         Math.min(rect.width, (rect.height / slide.height) * slide.width)
@@ -64,7 +58,7 @@ export default function NextJsImage({ slide, offset, rect }: NextJsImageProps) {
       <Image
         fill
         alt=""
-        src={slide}
+        src={slide.src}
         loading="eager"
         draggable={false}
         placeholder={slide.blurDataURL ? "blur" : undefined}

@@ -10,13 +10,29 @@ import "react-photo-album/rows.css";
 
 import NextJsImage from "./nextJsImage";
 
+import type { Photo } from "react-photo-album";
+
 // gsap
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+// photos
 import photos from "./photos";
-import { useGSAP } from "@gsap/react";
+const checkedPhotos: Photo[] = photos.map((photo) => {
+  if (typeof photo.width !== "number" || typeof photo.height !== "number") {
+    console.log(photo);
+    throw new Error("Photo is missing width or height");
+  }
+
+  return {
+    src: photo.src,
+    width: photo.width,
+    height: photo.height,
+    alt: photo.alt
+  };
+});
 
 const PhotoGallery = () => {
   const [index, setIndex] = useState(-1);
@@ -75,7 +91,7 @@ const PhotoGallery = () => {
       </Title>
       <div className="breakout photos-container">
         <RowsPhotoAlbum
-          photos={photos}
+          photos={checkedPhotos}
           targetRowHeight={300}
           onClick={({ index: current }) => setIndex(current)}
         />

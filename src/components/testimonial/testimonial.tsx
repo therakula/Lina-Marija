@@ -44,7 +44,7 @@ const testimonialArray: Testimonial[] = [
   },
   {
     male: true,
-    text: "Mesto je magično sjajno i izgleda mnogo, mnogo bolje nego što možete videti na fotografijama. Okolina je predivna, enterijer veoma udoban. Obično iznajmljujem smeštaj samo da prenoćim i nastavim avanturu, kao što je bilo i u ovom slučaju. Ali mesto je toliko mirno i lepo da sam siguran da ćemo se vratiti na duži period samo da uživamo u njemu. Hvala Radovanu i njegovoj ženi na tako sjajnom smeštaju.",
+    text: "Mesto je magično, sjajno i izgleda mnogo, mnogo bolje nego što možete videti na fotografijama. Okolina je predivna, enterijer veoma udoban. Obično iznajmljujem smeštaj samo da prenoćim i nastavim avanturu, kao što je bilo i u ovom slučaju. Ali mesto je toliko mirno i lepo da sam siguran da ćemo se vratiti na duži period samo da uživamo u njemu. Hvala Radovanu i njegovoj ženi na tako sjajnom smeštaju.",
     name: "Pavel",
     imgNumber: 3,
     from: "Airbnb"
@@ -76,6 +76,7 @@ const checkArrows = () => {
 
 const TestimonialSwiper = () => {
   useGSAP(() => {
+    // TITLE
     const tl = gsap.timeline({
       ease: "power3.in",
       scrollTrigger: {
@@ -95,6 +96,24 @@ const TestimonialSwiper = () => {
         y: 0,
         autoAlpha: 1,
         filter: "blur(0)"
+      }
+    );
+
+    // TESTIMONIALS
+    gsap.fromTo(
+      ".testimonial-wrap",
+      {
+        autoAlpha: 0,
+        filter: "blur(8px)"
+      },
+      {
+        autoAlpha: 1,
+        filter: "blur(0)",
+        scrollTrigger: {
+          trigger: ".testimonial-wrap",
+          start: "top 80%"
+        },
+        ease: "power1.in"
       }
     );
   });
