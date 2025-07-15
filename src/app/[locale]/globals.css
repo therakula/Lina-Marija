@@ -32,6 +32,8 @@ html {
   background-color: rgb(25, 35, 39);
   scroll-behavior: smooth;
   scroll-padding-top: var(--scroll-padding-top);
+
+  interpolate-size: allow-keywords;
 }
 
 html,
@@ -54,8 +56,13 @@ body {
   margin: 0;
 }
 
-*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-  font-family: "Cabin-Regular", serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rosehot", serif;
 }
 
 a {

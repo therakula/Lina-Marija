@@ -1,0 +1,13 @@
+{
+  "Navigation": {
+    "links": {
+      "oNama": "O Nama",
+      "lokacija": "Lokacija",
+      "fotografije": "Fotografije",
+      "kontakt": "Kontakt",
+      "recenzije": "Recenzije",
+      "faqs": "Česta Pitanja"
+    },
+    "rezervisi": "Rezerviši"
+  }
+}

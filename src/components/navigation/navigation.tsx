@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { useRef } from "react";
 import Image from "next/image";
-import { BurgetButton } from "../burger/burger";
+import { useRef } from "react";
+import { BurgerButton } from "../burger/burger";
+import Sidebar from "./sidebar";
 import localFont from "next/font/local";
+import { usePathname } from "next/navigation";
 
 import "./navigation-style.css";
 
@@ -11,6 +13,7 @@ import { useWindowWidth } from "@/hooks/useWindowWidth";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,39 +22,13 @@ const cabinRegular = localFont({
   fallback: ["sans-serif"]
 });
 
-const handleSidebar = () => {
-  const checkbox =
-    (document.querySelector("#burger-checkbox") as HTMLInputElement) || null;
-
-  if (checkbox && checkbox.checked) {
-    checkbox.checked = false;
-  }
-};
-
-const Sidebar = () => {
-  return (
-    <div className="sidebar">
-      <ul>
-        <li onClick={handleSidebar}>
-          <a href="#about">O Nama</a>
-        </li>
-        <li>
-          <a href="#location">Lokacija</a>
-        </li>
-        <li>
-          <a href="#photos">Fotografije</a>
-        </li>
-        <li>
-          <a href="#contact">Kontakt</a>
-        </li>
-      </ul>
-    </div>
-  );
-};
-
 const Navigation = () => {
   const width = useWindowWidth();
   const navRef = useRef<HTMLElement>(null);
+
+  const path = usePathname();
+
+  const t = useTranslations("Navigation");
 
   useGSAP(() => {
     if (navRef.current) {
@@ -86,47 +63,52 @@ const Navigation = () => {
         </div>
         <ul className="navigation-links">
           <li>
-            <Link href="#about">O Nama</Link>
+            <Link href="#about">{t("links.oNama")}</Link>
           </li>
           <li>
             {" "}
-            <Link href="#location">Lokacija</Link>
+            <Link href="#location">{t("links.lokacija")}</Link>
           </li>
           <li>
             {" "}
-            <Link href="#photos">Fotografije</Link>
+            <Link href="#photos">{t("links.fotografije")}</Link>
           </li>
           <li>
             {" "}
-            <Link href="#contact">Kontakt</Link>
+            <Link href="#contact">{t("links.kontakt")}</Link>
           </li>
           <li>
             {" "}
-            <Link href="#recenzije">Recenzije</Link>
+            <Link href="#recenzije">{t("links.recenzije")}</Link>
           </li>
           <li>
             {" "}
-            <Link href="#cestapitanja">Cesta Pitanja</Link>
+            <Link href="#cestapitanja">{t("links.faqs")}</Link>
           </li>
         </ul>
 
         {width && width > 700 ? (
           <div className="cta-btn--wrapper">
-            <div className="cta-btn">
+            <div
+              className={`cta-btn ${
+                path.includes("/de-DE") ? "font-l" : "font-xl"
+              }`}
+            >
               <Link
                 href="https://www.booking.com/hotel/rs/lina-maria-holiday-home-zlatibor.sr.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-btn__link"
+                data-text={t("rezervisi")}
               />
             </div>
           </div>
         ) : (
-          <BurgetButton />
+          <BurgerButton />
         )}
       </div>
 
-      <Sidebar />
+      <Sidebar t={t} />
     </header>
   );
 };

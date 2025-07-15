@@ -1,0 +1,13 @@
+{
+  "Navigation": {
+    "links": {
+      "oNama": "Über uns",
+      "lokacija": "Standort",
+      "fotografije": "Fotografien",
+      "kontakt": "Kontakt",
+      "recenzije": "Rezensionen",
+      "faqs": "FAQ"
+    },
+    "rezervisi": "Jetzt buchen"
+  }
+}

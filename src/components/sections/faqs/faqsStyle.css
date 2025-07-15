@@ -28,7 +28,7 @@
   margin-block-end: 1.2rem;
 }
 
-p.faq-answer {
+div.faq-answer {
   max-width: 40ch;
   height: 0;
   interpolate-size: allow-keywords;
@@ -36,6 +36,6 @@ p.faq-answer {
   transition: all 0.5s ease-in-out;
 }
 
-.faq-wrapper:has(.faq-input:checked) p.faq-answer {
+.faq-wrapper:has(.faq-input:checked) div.faq-answer {
   height: auto;
 }

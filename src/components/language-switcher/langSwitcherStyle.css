@@ -1,0 +1,28 @@
+.select {
+  --option-padding: 4px;
+  --flag-width: 50px;
+  --select-height: calc(var(--flag-width) * var(--ar));
+  position: relative;
+  width: var(--flag-width);
+  height: calc((var(--flag-width) * 2 / 3) + 3px);
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.select .option {
+  padding: var(--option-padding);
+  order: 2;
+}
+
+img.flag {
+  /* width: var(--flag-width); */
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.select .active {
+  border: 1px solid green;
+  order: 1;
+}

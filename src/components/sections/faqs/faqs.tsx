@@ -102,8 +102,8 @@ const Faq = ({ item, index }: FaqProps) => {
         className="faq-input"
         onChange={handleClick}
       />
-      <p className="faq-answer">
-        {newAnswerString ? newAnswerString : ""}
+      <div className="faq-answer">
+        <p>{newAnswerString ? newAnswerString : ""}</p>
 
         {newAnswerList ? (
           <ul>
@@ -114,7 +114,7 @@ const Faq = ({ item, index }: FaqProps) => {
         ) : (
           ""
         )}
-      </p>
+      </div>
     </div>
   );
 };
