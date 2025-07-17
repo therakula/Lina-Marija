@@ -16,7 +16,7 @@
 }
 
 .faq-label {
-  font-size: 2rem;
+  font-size: clamp(1.625rem, 0.255vw + 1.569rem, 1.875rem);
   font-weight: 600;
 
   &:hover {
@@ -29,7 +29,7 @@
 }
 
 div.faq-answer {
-  max-width: 40ch;
+  max-width: 55ch;
   height: 0;
   interpolate-size: allow-keywords;
   overflow: clip;
@@ -38,4 +38,15 @@ div.faq-answer {
 
 .faq-wrapper:has(.faq-input:checked) div.faq-answer {
   height: auto;
+}
+
+.faqs-section ul {
+  padding: 0;
+  /* min:20px max: 23px */
+  font-size: clamp(1.25rem, 0.191vw + 1.208rem, 1.438rem);
+  padding: 0.5rem 0 0 2rem;
+
+  & li::marker {
+    color: var(--accentColor);
+  }
 }

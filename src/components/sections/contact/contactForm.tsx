@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
+import Success from "./success";
+
 import { IoIosSend } from "react-icons/io";
 
 import Image from "next/image";
@@ -21,18 +24,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function testAnimation(e: React.FormEvent<HTMLFormElement>) {
-  e.preventDefault();
-  const btn = document.querySelector(".submit-btn");
-  btn?.classList.add("animation");
-
-  setTimeout(() => {
-    btn?.classList.remove("animation");
-  }, 2000);
-}
-
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
+  const captchaRef = useRef<ReCAPTCHA>(null);
+  const formWrapperRef = useRef<HTMLDivElement | null>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [sent, setSent] = useState<boolean>(false);
 
   const [btnDisabled, setBtnDisabled] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
@@ -43,13 +40,18 @@ const ContactForm = () => {
     }
   }, [btnDisabled]);
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
 
     setBtnDisabled(true);
 
-    if (!(formRef.current instanceof HTMLElement)) return;
+    if (!(formRef.current instanceof HTMLFormElement) || !captchaToken) return;
+
+    const hiddenInput = formRef.current.querySelector<HTMLInputElement>(
+      'input[name="g-recaptcha-response"]'
+    );
+    if (hiddenInput) hiddenInput.value = captchaToken;
 
     console.log("SENDING...");
     // emailjs
@@ -65,20 +67,29 @@ const ContactForm = () => {
     //     }
     //   );
     setLoading(true);
-    emailjs
-      .sendForm("default_service", "template_00hbveq", formRef.current, {
-        publicKey: "bv4v3kt0eysr2h69G"
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
-    form.reset();
-    setTimeout(() => setLoading(false), 1000 * 2);
+
+    try {
+      await emailjs
+        .sendForm("default_service", "template_00hbveq", formRef.current, {
+          publicKey: "bv4v3kt0eysr2h69G"
+        })
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            setSent(true);
+          },
+          (error) => {
+            console.log("FAILED...", error);
+          }
+        );
+    } catch (error) {
+      alert("Something went wrong");
+      console.log(error);
+    } finally {
+      captchaRef.current?.reset();
+      form.reset();
+      setLoading(false);
+    }
   };
 
   useGSAP(() => {
@@ -107,61 +118,89 @@ const ContactForm = () => {
       <Title as="h2" className="contact-title">
         Imate Pitanja? Pišite nam
       </Title>
-      <div className="form-wrapper">
-        <div className="form-logo--wrapper">
-          <div className="form-logo--wrapper-inner">
-            <Link href="#home">
-              <Image
-                fill
-                src="/images/logo-2.png"
-                alt="logo"
-                className="navigation-logo"
-              />
-            </Link>
-          </div>
-        </div>
-        <form action="" className="form" ref={formRef} onSubmit={testAnimation}>
-          <div className="form__group">
-            <label htmlFor="name">Ime</label>
-            <input
-              type="text"
-              id="name"
-              {...inputOptions}
-              name="from_name"
-              required
-              placeholder="Name"
-            />
-          </div>
-          <div className="form__group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              {...inputOptions}
-              name="email"
-              required
-              placeholder="Email"
-            />
-          </div>
-          <div className="form__group">
-            <label htmlFor="message">Poruka</label>
-            <textarea
-              id="message"
-              rows={10}
-              name="message"
-              required
-              placeholder="Message"
-            />
-          </div>
+      <div
+        className="form-wrapper--outer"
+        style={{ backgroundColor: "transparent" }}
+        ref={formWrapperRef}
+      >
+        {sent ? (
+          <Success
+            width={200}
+            w2={formWrapperRef.current?.offsetWidth}
+            h2={formWrapperRef.current?.offsetHeight}
+          />
+        ) : (
+          <div className="form-wrapper">
+            <div className="form-logo--wrapper">
+              <div className="form-logo--wrapper-inner">
+                <Link href="#home">
+                  <Image
+                    fill
+                    src="/images/logo-2.png"
+                    alt="logo"
+                    className="navigation-logo"
+                  />
+                </Link>
+              </div>
+            </div>
+            <form
+              action=""
+              className="form"
+              ref={formRef}
+              onSubmit={() => setSent(true)}
+            >
+              <div className="form__group">
+                <label htmlFor="name">Ime</label>
+                <input
+                  type="text"
+                  id="name"
+                  {...inputOptions}
+                  name="from_name"
+                  required
+                  placeholder="Name"
+                />
+              </div>
+              <div className="form__group">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  {...inputOptions}
+                  name="email"
+                  required
+                  placeholder="Email"
+                />
+              </div>
+              <div className="form__group">
+                <label htmlFor="message">Poruka</label>
+                <textarea
+                  id="message"
+                  rows={10}
+                  name="message"
+                  required
+                  placeholder="Message"
+                />
+              </div>
 
-          <button
-            disabled={btnDisabled}
-            type="submit"
-            className={`submit-btn ${loading ? "animation" : ""}`}
-          >
-            <IoIosSend />
-          </button>
-        </form>
+              <input type="hidden" name="g-recaptcha-response" />
+
+              <ReCAPTCHA
+                sitekey="6LfOSoYrAAAAAJ48e5OyoSrFB6c_PEbx4WZZX_Ro"
+                ref={captchaRef}
+                onChange={(token) => setCaptchaToken(token)}
+                className="recaptcha"
+              />
+
+              <button
+                disabled={btnDisabled}
+                type="submit"
+                className={`submit-btn ${loading ? "animation" : ""}`}
+              >
+                <IoIosSend />
+              </button>
+            </form>
+          </div>
+        )}
       </div>
     </section>
   );

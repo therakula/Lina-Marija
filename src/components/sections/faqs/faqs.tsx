@@ -105,7 +105,7 @@ const Faq = ({ item, index }: FaqProps) => {
       <div className="faq-answer">
         <p>{newAnswerString ? newAnswerString : ""}</p>
 
-        {newAnswerList ? (
+        {newAnswerList.length > 0 ? (
           <ul>
             {newAnswerList.map((listItem, index) => (
               <li key={index}>{listItem}</li>
