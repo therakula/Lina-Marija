@@ -1,14 +1,47 @@
 .select {
   --option-padding: 4px;
-  --flag-width: 50px;
-  --select-height: calc(var(--flag-width) * var(--ar));
   position: relative;
-  width: var(--flag-width);
-  height: calc((var(--flag-width) * 2 / 3) + 3px);
 
   display: flex;
-  flex-direction: column;
   overflow: hidden;
+}
+
+.select[data-direction="vertical"] {
+  --flag-width: 40px;
+  width: var(--flag-width);
+  max-height: calc((var(--flag-width) * 2 / 3) + 3px);
+  transition: max-height 0.4s ease-in-out;
+  flex-direction: column;
+  position: absolute;
+  left: -50px;
+  top: 0;
+}
+
+.select[data-direction="horizontal"] {
+  --flag-height: 40px;
+  height: calc(var(--flag-height) - 1);
+  flex-direction: row;
+  max-width: calc((var(--flag-height) * 3 / 2) - 10px);
+  overflow: hidden;
+  transition: max-width 0.4s ease-in-out;
+}
+
+.select[data-direction="horizontal"] > * {
+  flex-shrink: 0;
+}
+
+.select[data-direction="horizontal"] .flag {
+  width: 40px;
+  /* height: auto; */
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.select[data-direction="vertical"].open {
+  max-height: 500px;
+}
+.select[data-direction="horizontal"].open {
+  max-width: 500px;
 }
 
 .select .option {
@@ -23,6 +56,6 @@ img.flag {
 }
 
 .select .active {
-  border: 1px solid green;
+  border: 1px solid var(--accentColor);
   order: 1;
 }

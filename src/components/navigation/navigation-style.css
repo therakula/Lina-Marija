@@ -64,6 +64,11 @@ ul.navigation-links li:hover::before {
   font-size: clamp(0.938rem, 0.263vw + 0.872rem, 1.188rem);
 }
 
+.cta-btn--inner {
+  position: relative;
+  width: fit-content;
+}
+
 .cta-btn {
   --width: 160px;
   --height: 50px;
@@ -176,7 +181,7 @@ ul.navigation-links li:hover::before {
   .cta-btn--wrapper {
     flex-basis: 100%;
   }
-  .cta-btn {
+  .cta-btn--inner {
     margin-inline-start: auto;
   }
 }

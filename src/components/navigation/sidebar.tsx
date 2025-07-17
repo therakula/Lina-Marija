@@ -1,6 +1,8 @@
 import Link from "next/link";
 import localFont from "next/font/local";
 
+import LangSwitcher from "../language-switcher/language-switcher";
+
 const Rosehot = localFont({
   src: "../../../public/fonts/Rosehot.ttf",
   fallback: ["sans-serif"]
@@ -54,6 +56,9 @@ const Sidebar = ({ t }: Props) => {
         <li onClick={handleSidebar}>
           {" "}
           <Link href="#cestapitanja">{t("links.faqs")}</Link>
+        </li>
+        <li>
+          <LangSwitcher direction="horizontal" />
         </li>
       </ul>
     </div>

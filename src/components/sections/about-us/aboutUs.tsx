@@ -5,8 +5,6 @@ import gsap from "gsap";
 
 import Image from "next/image";
 
-import LangSwitcher from "@/components/language-switcher/language-switcher";
-
 gsap.registerPlugin(ScrollTrigger);
 
 import "./aboutUsStyle.css";
@@ -100,8 +98,6 @@ const AboutUs = () => {
           layout="responsive"
         />
       </div>
-
-      <LangSwitcher />
     </section>
   );
 };

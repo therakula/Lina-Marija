@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import Flag from "react-world-flags";
 import "./langSwitcherStyle.css";
 import { useLocale } from "next-intl";
+import { useRef } from "react";
 
 const languages = [
   {
@@ -24,25 +25,33 @@ const languages = [
   }
 ];
 
-const LangSwitcher = () => {
+const toggleOpen = (el: HTMLDivElement) => {
+  if (!el) return;
+
+  el.classList.toggle("open");
+};
+
+type DirectionProp = {
+  direction: "vertical" | "horizontal";
+};
+
+const LangSwitcher = ({ direction }: DirectionProp) => {
   const locale = useLocale();
+  const refWrapper = useRef<HTMLDivElement>(null);
+
   return (
-    <div className="flags-wrapp select" data-open="false">
+    <div
+      className="flags-wrapp select"
+      data-open="false"
+      ref={refWrapper}
+      data-direction={direction}
+    >
       {languages.map((lang) => (
         <div
           className={`option ${locale === lang.path ? "active" : ""}`}
           key={lang.code}
           onClick={() => {
-            const select = document.querySelector(".select") as HTMLElement;
-            const height = window.getComputedStyle(select).height;
-            const parsedHeight = parseInt(height, 10);
-            if (select.dataset.open === "false") {
-              select.style.height = "auto";
-              select.dataset.open = "true";
-            } else {
-              select.dataset.open = "false";
-              select.style.height = `${parsedHeight / 3}px`;
-            }
+            toggleOpen(refWrapper.current!);
           }}
         >
           <Link

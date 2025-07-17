@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { BurgerButton } from "../burger/burger";
 import Sidebar from "./sidebar";
+import LangSwitcher from "../language-switcher/language-switcher";
 import localFont from "next/font/local";
 import { usePathname } from "next/navigation";
 
@@ -89,18 +90,21 @@ const Navigation = () => {
 
         {width && width > 700 ? (
           <div className="cta-btn--wrapper">
-            <div
-              className={`cta-btn ${
-                path.includes("/de-DE") ? "font-l" : "font-xl"
-              }`}
-            >
-              <Link
-                href="https://www.booking.com/hotel/rs/lina-maria-holiday-home-zlatibor.sr.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cta-btn__link"
-                data-text={t("rezervisi")}
-              />
+            <div className="cta-btn--inner">
+              <LangSwitcher direction="vertical" />
+              <div
+                className={`cta-btn ${
+                  path.includes("/de-DE") ? "font-l" : "font-xl"
+                }`}
+              >
+                <Link
+                  href="https://www.booking.com/hotel/rs/lina-maria-holiday-home-zlatibor.sr.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cta-btn__link"
+                  data-text={t("rezervisi")}
+                />
+              </div>
             </div>
           </div>
         ) : (
