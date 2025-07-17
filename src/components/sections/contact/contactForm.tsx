@@ -49,39 +49,36 @@ const ContactForm = () => {
     if (!(formRef.current instanceof HTMLFormElement) || !captchaToken) return;
 
     const hiddenInput = formRef.current.querySelector<HTMLInputElement>(
-      'input[name="g-recaptcha-response"]'
+      'input[name="g-recaptcha"]'
     );
+
+    console.log("hidden input", hiddenInput);
     if (hiddenInput) hiddenInput.value = captchaToken;
+    await new Promise((resolve) => setTimeout(resolve, 50));
 
     console.log("SENDING...");
-    // emailjs
-    //   .sendForm("default_service", "template_t1b0o76", formRef.current, {
-    //     publicKey: "bv4v3kt0eysr2h69G"
-    //   })
-    //   .then(
-    //     () => {
-    //       console.log("SUCCESS!");
-    //     },
-    //     (error) => {
-    //       console.log("FAILED...", error);
-    //     }
-    //   );
     setLoading(true);
 
     try {
-      await emailjs
-        .sendForm("default_service", "template_00hbveq", formRef.current, {
+      await emailjs.sendForm(
+        "default_service",
+        "template_00hbveq",
+        formRef.current,
+        {
           publicKey: "bv4v3kt0eysr2h69G"
-        })
-        .then(
-          () => {
-            console.log("SUCCESS!");
-            setSent(true);
-          },
-          (error) => {
-            console.log("FAILED...", error);
-          }
-        );
+        }
+      );
+      await emailjs.sendForm(
+        "default_service",
+        "template_t1b0o76",
+        formRef.current,
+        {
+          publicKey: "bv4v3kt0eysr2h69G"
+        }
+      );
+
+      console.log("Both emails sent successfully");
+      setSent(true);
     } catch (error) {
       alert("Something went wrong");
       console.log(error);
@@ -147,7 +144,7 @@ const ContactForm = () => {
               action=""
               className="form"
               ref={formRef}
-              onSubmit={() => setSent(true)}
+              onSubmit={handleSubmit}
             >
               <div className="form__group">
                 <label htmlFor="name">Ime</label>
@@ -182,7 +179,11 @@ const ContactForm = () => {
                 />
               </div>
 
-              <input type="hidden" name="g-recaptcha-response" />
+              <input
+                type="hidden"
+                name="g-recaptcha"
+                value={captchaToken || ""}
+              />
 
               <ReCAPTCHA
                 sitekey="6LfOSoYrAAAAAJ48e5OyoSrFB6c_PEbx4WZZX_Ro"
