@@ -6,7 +6,7 @@ header.header {
   width: 100%;
   z-index: 999;
   max-width: 2000px;
-  background-color: rgba(45, 114, 151, 0.1);
+  /* background-color: rgba(45, 114, 151, 0.1); */
   letter-spacing: 1px;
 
   opacity: 0;

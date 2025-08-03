@@ -15,41 +15,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
+import { useTranslations } from "next-intl";
+
+import { testimonialArray } from "./testimonialData";
+
 gsap.registerPlugin(ScrollTrigger);
-
-type fromProps = "Booking" | "Airbnb";
-
-interface Testimonial {
-  male: boolean;
-  text: string;
-  name: string;
-  imgNumber: number;
-  from: fromProps;
-}
-
-const testimonialArray: Testimonial[] = [
-  {
-    male: false,
-    text: "„Kućica Lina-Marija je pravi raj za ljubitelje čiste prirode, planinarenja i tišine. Smeštena je u netaknutoj prirodi, a ipak lako dostupna. Kućica je okružena mirisnom četinarskom šumom i pogledom na proplanke, nudi potpuni mir i povezanost sa prirodom. Posebno smo uživali u dugim šetnjama i planinarenju – staze kreću direktno iz dvorišta kuće, lako su dostupne i vode kroz raznolike predele (uz potok, preko golih brda i kroz mirisnu četinarsku šumu; možete sresti konje, kao i razne divlje i domaće životinje).”",
-    name: "Milena",
-    imgNumber: 1,
-    from: "Booking"
-  },
-  {
-    male: true,
-    text: "„Prelep ambijent, na jako maloj udaljenosti od centra Zlatibora, pruža autentičan doživljaj planine. Maksimalno korektan domaćin, sve čisto i sve po dogovoru. Preporuka.” ",
-    name: "Nenad",
-    imgNumber: 2,
-    from: "Booking"
-  },
-  {
-    male: true,
-    text: "Mesto je magično, sjajno i izgleda mnogo, mnogo bolje nego što možete videti na fotografijama. Okolina je predivna, enterijer veoma udoban. Obično iznajmljujem smeštaj samo da prenoćim i nastavim avanturu, kao što je bilo i u ovom slučaju. Ali mesto je toliko mirno i lepo da sam siguran da ćemo se vratiti na duži period samo da uživamo u njemu. Hvala Radovanu i njegovoj ženi na tako sjajnom smeštaju.",
-    name: "Pavel",
-    imgNumber: 3,
-    from: "Airbnb"
-  }
-];
 
 const quotesImageStyle = {
   width: "180px",
@@ -75,6 +45,8 @@ const checkArrows = () => {
 };
 
 const TestimonialSwiper = () => {
+  const t = useTranslations("Reviews");
+
   useGSAP(() => {
     // TITLE
     const tl = gsap.timeline({
@@ -121,7 +93,7 @@ const TestimonialSwiper = () => {
   return (
     <section className="testimonial-section full-width layout section">
       <Title as="h2" className="testimonial-title">
-        Sta drugi kazu o nama
+        {t("title")}
       </Title>
       <div className="testimonial-wrap content testimonial-swiper">
         <Image
@@ -139,6 +111,55 @@ const TestimonialSwiper = () => {
           onResize={() => checkArrows()}
         >
           {testimonialArray.map((item, index) => {
+            return (
+              <SwiperSlide className="testimonial" key={index}>
+                {({ isActive }) => (
+                  <div
+                    className="swiper-item__wrapper"
+                    style={{ scale: isActive ? "1" : ".8" }}
+                  >
+                    {t(`data.${item.key}.comment`)
+                      .split("/n")
+                      .map((line, index) => (
+                        <p key={index} style={{ whiteSpace: "pre-line" }}>
+                          {line}
+                          <br />
+                        </p>
+                      ))}
+                    <div className="testimonial-name-image__wrapper">
+                      <Image
+                        className={`${isActive ? "active" : ""}`}
+                        src={`/images/avatars/avatar-${item.male ? "m" : "w"}-${
+                          item.imgNumber
+                        }.png`}
+                        alt="avatar"
+                        width={70}
+                        height={70}
+                      />{" "}
+                      <div className="testimonial-name">
+                        {item.name},{" "}
+                        <span
+                          style={{
+                            fontStyle: "italic",
+                            color: "var(--accentColor)",
+                            fontWeight: "normal",
+                            fontSize: "1rem"
+                          }}
+                        >
+                          {item.from}
+                        </span>
+                        <span className="testimonial-date">
+                          {t(`data.${item.key}.date`)}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </SwiperSlide>
+            );
+          })}
+
+          {/* {testimonialArray.map((item, index) => {
             return (
               <SwiperSlide className="testimonial" key={index}>
                 {({ isActive }) => (
@@ -172,7 +193,7 @@ const TestimonialSwiper = () => {
                 )}
               </SwiperSlide>
             );
-          })}
+          })} */}
         </Swiper>
       </div>
     </section>

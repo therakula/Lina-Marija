@@ -103,7 +103,7 @@ textarea[name="message"] {
 }
 
 .form-wrapper .form-logo--wrapper {
-  --width: 120px;
+  --width: 100px;
   --padding: 18px;
   background-color: var(--lightColor);
   width: var(--width);
@@ -153,6 +153,12 @@ label {
 
 input:focus:invalid + .warning {
   opacity: 1;
+}
+
+.form-section h4 {
+  color: var(--lightColor);
+  text-align: center;
+  margin-block: 0.5rem 1rem;
 }
 
 /* Style recaptcha */

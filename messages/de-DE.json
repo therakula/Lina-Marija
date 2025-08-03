@@ -9,5 +9,25 @@
       "faqs": "FAQ"
     },
     "rezervisi": "Jetzt buchen"
+  },
+  "About": {
+    "title": "Über uns",
+    "text": {
+      "part1": "Unsere Blockhütte Lina-Marija ist komplett aus Holz gebaut und mit Liebe gefertigt.\nWir bieten echte Entspannung, fernab von touristischen Dörfern, und heißen diejenigen willkommen, die Natur, ländliche Idylle, Abenteuer und Entspannung suchen.\nJe nach Wetter bietet das Haus einen atemberaubenden Blick auf die umliegenden Berge und Kiefernwälder, die Ihre Seele beruhigen werden.\nSonnenauf- und -untergänge können vom Haus aus erlebt werden.\nIn einem Umkreis von 100 km befinden sich wunderschöne Naturschutzgebiete und interessante Sehenswürdigkeiten.\nUnd natürlich Wintersportmöglichkeiten am nahegelegenen Zlatibor.",
+      "part2": "Das Dorf liegt vor uns – hinter uns beginnt der Weg in die Wildnis.\nNach einer einstündigen Wanderung zum Berggipfel werden Sie belohnt, bei meist schönem Wetter,\nmit einem atemberaubenden Panoramablick auf die Dinarischen Alpen Zlatibor und\nNationalpark Tara, bis hin zu Ovčar und Kablara, die ebenfalls vom Haus aus genossen werden können.\nDer neblige Fluss, der je nach Wetterlage zeitweise auf dem Hochplateau entsteht\nund dann kaskadenartig ins Tal vor unseren Augen fließt, ist ebenfalls unvergesslich, wenn"
+    }
+  },
+  "Gallery": {
+    "title": "Fotogalerie",
+    "text": "Erleben Sie den Charme der Natur und die Wärme des Landlebens.\nUnsere Blockhütte, eingebettet in unberührter Natur, bietet einen authentischen Rückzugsort vom Alltag –\numgeben von duftenden Kiefern, Hügeln und Stille.\nDie liebevoll eingerichtete Innenausstattung, ein Grillplatz im Freien und die atemberaubende Landschaft rund um das Haus machen jeden Moment besonders.\nDie Fotografien fangen einen Teil dieser Magie ein."
+  },
+  "Map": {
+    "title": "Wo befinden wir uns?",
+    "text": {
+      "part1": "Umgeben von wunderschönen Naturschutzgebieten inmitten malerischer Landschaften,\nbefinden wir uns zentral, nur 2 km von der Hauptverkehrsverbindung\nzwischen Bosnien und Herzegowina und Serbien entfernt, sowie dem Bahnhof Branešci,\nder sich auf der Bahnstrecke zwischen Belgrad und Podgorica befindet.",
+      "part2": "In der Nähe befinden sich auch bekannte Orte wie Višegrad, 50 km entfernt,\nin der geschichtlich reichen Bosnien und Herzegowina, Heimat der beeindruckenden\n„Brücke über die Drina“, die den Autor Ivo Andrić inspirierte, seinen gleichnamigen Roman zu schreiben,\nfür den er den Nobelpreis für Literatur erhielt.",
+      "part3": "Die Naturreservate Tara, Zlatibor und Mokra Gora sind ebenfalls leicht erreichbar\nin weniger als 50 Kilometern.",
+      "location": "Podgorica 36, Šljivovica, Sainovina, Čajetina"
+    }
   }
 }

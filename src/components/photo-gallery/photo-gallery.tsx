@@ -12,6 +12,8 @@ import NextJsImage from "./nextJsImage";
 
 import type { Photo } from "react-photo-album";
 
+import { useTranslations } from "next-intl";
+
 // gsap
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -36,6 +38,8 @@ const checkedPhotos: Photo[] = photos.map((photo) => {
 
 const PhotoGallery = () => {
   const [index, setIndex] = useState(-1);
+
+  const t = useTranslations("Gallery");
 
   useEffect(() => {
     const handle = setTimeout(() => {
@@ -107,15 +111,9 @@ const PhotoGallery = () => {
   return (
     <section className="section photo-gallery layout" id="photos">
       <Title as="h2" className="photo-section--title breakout">
-        Foto Galerija
+        {t("title")}
       </Title>
-      <p className="breakout photo-section--text">
-        Doživite čar prirode i toplinu života na selu. Naša drvena brvnara,
-        smeštena usred netaknute prirode, pruža autentičan beg od svakodnevice –
-        okružena mirisnim borovima, brežuljcima i tišinom. Unutrašnjost uređena
-        s ljubavlju, mesto za roštilj na otvorenom i zadivljujući pejzaži oko
-        kuće čine svaki trenutak posebnim. Fotografije prenose deo te magije.
-      </p>
+      <p className="breakout photo-section--text">{t("text")}</p>
       <div className="breakout photos-container">
         <RowsPhotoAlbum
           photos={checkedPhotos}

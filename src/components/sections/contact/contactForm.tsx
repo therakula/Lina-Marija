@@ -28,11 +28,12 @@ const ContactForm = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
   const captchaRef = useRef<ReCAPTCHA>(null);
   const formWrapperRef = useRef<HTMLDivElement | null>(null);
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [sent, setSent] = useState<boolean>(false);
 
   const [btnDisabled, setBtnDisabled] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
+
+  const [isVerified, setIsVerified] = useState<boolean>(false);
 
   useEffect(() => {
     if (btnDisabled) {
@@ -40,55 +41,83 @@ const ContactForm = () => {
     }
   }, [btnDisabled]);
 
+  const HandleCaptchaSubmission = async (token: string | null) => {
+    try {
+      if (token) {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/application/json"
+          },
+          body: JSON.stringify({ token })
+        });
+        const { success } = await res.json();
+
+        if (success) {
+          setIsVerified(true);
+          console.log("Captcha verified successfully");
+        } else setIsVerified(false);
+      }
+    } catch (error) {
+      alert("Something went wrong with the captcha verification.");
+      console.log(error);
+      return false;
+    }
+  };
+
+  const handleChange = (token: string | null) => {
+    HandleCaptchaSubmission(token);
+  };
+  const handleExpired = () => {
+    setIsVerified(false);
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
-
+    setLoading(true);
     setBtnDisabled(true);
 
-    if (!(formRef.current instanceof HTMLFormElement) || !captchaToken) return;
+    if (captchaRef.current) {
+      if (isVerified) {
+        console.log("Captcha verified successfully");
+        try {
+          await emailjs.sendForm(
+            "default_service",
+            "template_00hbveq",
+            formRef.current!,
+            {
+              publicKey: "bv4v3kt0eysr2h69G"
+            }
+          );
 
-    const hiddenInput = formRef.current.querySelector<HTMLInputElement>(
-      'input[name="g-recaptcha-response"]'
-    );
-    if (hiddenInput) hiddenInput.value = captchaToken;
-
-    console.log("SENDING...");
-    // emailjs
-    //   .sendForm("default_service", "template_t1b0o76", formRef.current, {
-    //     publicKey: "bv4v3kt0eysr2h69G"
-    //   })
-    //   .then(
-    //     () => {
-    //       console.log("SUCCESS!");
-    //     },
-    //     (error) => {
-    //       console.log("FAILED...", error);
-    //     }
-    //   );
-    setLoading(true);
-
-    try {
-      await emailjs
-        .sendForm("default_service", "template_00hbveq", formRef.current, {
-          publicKey: "bv4v3kt0eysr2h69G"
-        })
-        .then(
-          () => {
-            console.log("SUCCESS!");
-            setSent(true);
-          },
-          (error) => {
-            console.log("FAILED...", error);
-          }
-        );
-    } catch (error) {
-      alert("Something went wrong");
-      console.log(error);
-    } finally {
-      captchaRef.current?.reset();
-      form.reset();
+          await emailjs.sendForm(
+            "default_service",
+            "template_t1b0o76",
+            formRef.current!,
+            {
+              publicKey: "bv4v3kt0eysr2h69G"
+            }
+          );
+          console.log("Both emails sent successfully");
+          setSent(true);
+        } catch (error) {
+          alert("Something went wrong");
+          console.log(error);
+        } finally {
+          captchaRef.current?.reset();
+          formRef.current?.reset();
+          // setLoading(false);
+        }
+      } else {
+        console.log("Captcha verification failed");
+        setLoading(false);
+        setBtnDisabled(false);
+        return;
+      }
+    } else {
+      console.log("Captcha ref is not defined");
       setLoading(false);
+      setBtnDisabled(false);
     }
   };
 
@@ -112,6 +141,10 @@ const ContactForm = () => {
       }
     );
   });
+
+  useEffect(() => {
+    console.log("isVerified", isVerified);
+  }, [isVerified]);
 
   return (
     <section className="form-section full-width layout section" id="contact">
@@ -143,11 +176,13 @@ const ContactForm = () => {
                 </Link>
               </div>
             </div>
+            <Title as="h4">Lina Marija</Title>
             <form
+              method="POST"
               action=""
               className="form"
               ref={formRef}
-              onSubmit={() => setSent(true)}
+              onSubmit={handleSubmit}
             >
               <div className="form__group">
                 <label htmlFor="name">Ime</label>
@@ -182,17 +217,16 @@ const ContactForm = () => {
                 />
               </div>
 
-              <input type="hidden" name="g-recaptcha-response" />
-
               <ReCAPTCHA
-                sitekey="6LfOSoYrAAAAAJ48e5OyoSrFB6c_PEbx4WZZX_Ro"
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
                 ref={captchaRef}
-                onChange={(token) => setCaptchaToken(token)}
+                onChange={handleChange}
+                onExpired={handleExpired}
                 className="recaptcha"
               />
 
               <button
-                disabled={btnDisabled}
+                // disabled={!isVerified}
                 type="submit"
                 className={`submit-btn ${loading ? "animation" : ""}`}
               >

@@ -9,5 +9,46 @@
       "faqs": "Česta Pitanja"
     },
     "rezervisi": "Rezerviši"
+  },
+  "About": {
+    "title": "O Nama",
+    "text": {
+      "part1": "Naša brvnara Lina-Marija, napravljena je u potpunosti od drveta i izrađena sa ljubavlju.\nNudimo pravo opuštanje, daleko od turističkih sela, i dočekujemo one koji traže prirodu, seosku idilu, avanturu i opuštanje.\nU zavisnosti od vremena, kuća nudi zadivljujući pogled na okolne planine i borove šume koje će umiriti vašu dušu.\nIzlazak i zalazak sunca mogu se doživeti iz kuće.\nU krugu od 100 km nalaze se prelepa prirodna područja i zanimljive znamenitosti.\nI, naravno, zimski sportovi na obližnjem Zlatiboru.",
+      "part2": "Selo je ispred – iza nas počinje put u divljinu.\nNakon jednosatnog uspona do planinskog vrha, bićete nagrađeni, po uglavnom lepom vremenu,\nzadivljujućim panoramskim pogledom na Dinarske planine Zlatibor i\nplanine Nacionalnog parka Tara, sve do Ovčara i Kablara, u kojima se\ntakođe može uživati iz kuće.\nMaglovita reka, koja se povremeno formira\nna visoravni u zavisnosti od vremena, a zatim se kaskadno spušta u\ndolinu pred našim očima, takođe je nezaboravna kada se gleda sa planine."
+    }
+  },
+  "Gallery": {
+    "title": "Foto Galerija",
+    "text": "Doživite čar prirode i toplinu života na selu.\nNaša drvena brvnara, smeštena usred netaknute prirode, pruža autentičan beg od svakodnevice –\nokružena mirisnim borovima, brežuljcima i tišinom.\nUnutrašnjost uređena s ljubavlju, mesto za roštilj na otvorenom i zadivljujući pejzaži oko kuće čine svaki trenutak posebnim.\nFotografije prenose deo te magije."
+  },
+  "Map": {
+    "title": "Gde se Nalazimo?",
+    "text": {
+      "part1": "Okruženi divnim rezervatima prirode usred slikovitog pejzaža,\nnalazimo se centralno, na samo 2 km od glavne saobraćajne veze\nizmeđu BiH i Srbije, i železničke stanice Branešci, koja se nalazi\nna železničkoj pruzi između Beograda i Podgorice.",
+      "part2": "U blizini su i poznata mesta, poput Višegrada, udaljenog 50 km,\nu istorijski bogatoj Bosni i Hercegovini, domu zapanjujućeg\n„Mosta na Drini“, koji je inspirisao autora Iva Andrića da napiše\nistoimeni roman, za koji je dobio Nobelovu nagradu za književnost.",
+      "part3": "Rezervati prirode Tara, Zlatibor i Mokra Gora lako su dostupni\nna manje od 50 kilometara.",
+      "location": "Podgorica 36, Šljivovica, Sainovina, Čajetina"
+    }
+  },
+  "Reviews": {
+    "title": "Sta drugi kazu o nama",
+    "data": {
+      "testimonial1": {
+        "comment": "Kućica Lina-Marija je pravi raj za ljubitelje čiste prirode, planinarenja i tišine. Smeštena je u netaknutoj prirodi, a ipak lako dostupna. Kućica je okružena mirisnom četinarskom šumom i pogledom na proplanke, nudi potpuni mir i povezanost sa prirodom.\nPosebno smo uživali u dugim šetnjama i planinarenju – staze kreću direktno iz dvorišta kuće, lako su dostupne i vode kroz raznolike predele (uz potok, preko golih brda i kroz mirisnu četinarsku šumu. Možete sresti konje, kao i razne divlje i domaće životinje.",
+        "date": "Maj 2025"
+      },
+      "testimonial2": {
+        "comment": "Prelep ambijent, na jako maloj udaljenosti od centra Zlatibora, pruža autentičan doživljaj planine. Maksimalno korektan domaćin, sve čisto i sve po dogovoru.\nPreporuka.",
+        "date": "Februar 2025"
+      },
+      "testimonial3": {
+        "comment": "Mesto je magično, sjajno i izgleda mnogo, mnogo bolje nego što možete videti na fotografijama. Okolina je predivna, enterijer veoma udoban.\nObično iznajmljujem smeštaj samo da prenoćim i nastavim avanturu, kao što je bilo i u ovom slučaju. Ali mesto je toliko mirno i lepo da sam siguran da ćemo se vratiti na duži period samo da uživamo u njemu. Hvala Radovanu i njegovoj ženi na tako sjajnom smeštaju.",
+        "date": "Maj 2025"
+      },
+      "testimonial4": {
+        "comment": "Vrlo udobna, moderna kuća na udaljenoj lokaciji — okružena mirom, tišinom i harmonijom s prirodom. Kuća je imala sve što je potrebno za svakodnevni život. Sve — sama kuća, posuđe, posteljina — bilo je čisto i sveže. Internet je radio odlično. Ukratko, sve što je potrebno za udoban boravak bilo je tu. Ali iskreno, čak i da nije bilo ničega, ovo mesto je toliko isceljujuće, toliko mirno i prelepo, da sve ostalo pada u drugi plan.\nPosebno želim da spomenem domaćine. Radovan i Helga su neverovatno ljubazni, otvoreni i srdačni ljudi. Od srca preporučujem boravak ovde — ovo je zaista posebno mesto.",
+        "date": "Jul 2025"
+      }
+    }
   }
 }
