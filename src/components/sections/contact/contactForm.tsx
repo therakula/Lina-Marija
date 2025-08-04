@@ -83,19 +83,19 @@ const ContactForm = () => {
         try {
           await emailjs.sendForm(
             "default_service",
-            "template_00hbveq",
+            process.env.EMAILJS_CONTACT_US_TEMPLATE_ID || "",
             formRef.current!,
             {
-              publicKey: "bv4v3kt0eysr2h69G"
+              publicKey: process.env.EMAILJS_PUBLIC_KEY
             }
           );
 
           await emailjs.sendForm(
             "default_service",
-            "template_t1b0o76",
+            process.env.EMAILJS_AUTO_REPLY_TEMPLATE_ID || "",
             formRef.current!,
             {
-              publicKey: "bv4v3kt0eysr2h69G"
+              publicKey: process.env.EMAILJS_PUBLIC_KEY
             }
           );
           console.log("Both emails sent successfully");

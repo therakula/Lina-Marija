@@ -50,5 +50,38 @@
         "date": "July 2025"
       }
     }
+  },
+  "Faq": {
+    "title": "Frequently Asked Questions",
+    "data": {
+      "question1": {
+        "question": "Where is the Lina‑Marija cabin located?",
+        "answer": "The cabin is located in a village in Serbia, just off the main highway that connects Bosnia & Herzegovina and Serbia, near the Branешci railway station between Belgrade and Podgorica."
+      },
+      "question2": {
+        "question": "Is the cabin available year‑round?",
+        "answer": "Yes — the cabin is available throughout the year, offering both summer and winter amenities, including heating, hot water, and cozy winter comforts like a pellet stove and bathroom heater."
+      },
+      "question3": {
+        "question": "What activities are available in the surrounding area?",
+        "answer": "<ul><li>Hiking directly from the backyard</li><li>Visits to the Tara, Zlatibor, and Mokra Gora national parks</li><li>Zlatibor cable car</li><li>Kustendorf / Drvengrad</li><li>Đurđevića Tara bridge (Montenegro)</li><li>Mileševa monastery</li><li>Tesla hydroelectric power plant and museum</li><li>Jokino Vrelo spring</li></ul>"
+      },
+      "question4": {
+        "question": "How many people can the cabin accommodate?",
+        "answer": "The cabin can comfortably host up to 6 guests:<ul><li>Four beds in the gallery (two doubles that can be put together)</li><li>One pull‑out sofa in the living room</li></ul>"
+      },
+      "question5": {
+        "question": "Is the cabin suitable for children and families?",
+        "answer": "Absolutely! The house is peaceful, safe, surrounded by nature, and has a large yard — it’s ideal for families with children."
+      },
+      "question6": {
+        "question": "Is there a kitchen and cooking equipment?",
+        "answer": "Yes — the kitchen is fully equipped with:<ul><li>Cooking and baking utensils</li><li>Dinnerware for six</li><li>Induction hob, electric kettle, and egg boiler</li><li>Refrigerator and stove</li></ul>"
+      },
+      "question7": {
+        "question": "Are pets allowed?",
+        "answer": "Yes — pets are welcome! Lina‑Marija cabin is surrounded by nature and ideal for guests traveling with dogs or other pets. Please let us know in advance if you’re bringing a pet so we can prepare your stay accordingly."
+      }
+    }
   }
 }
