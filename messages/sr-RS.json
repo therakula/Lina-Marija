@@ -31,7 +31,7 @@
     }
   },
   "Reviews": {
-    "title": "Sta drugi kazu o nama",
+    "title": "Sta drugi kažu o nama",
     "data": {
       "testimonial1": {
         "comment": "Kućica Lina-Marija je pravi raj za ljubitelje čiste prirode, planinarenja i tišine. Smeštena je u netaknutoj prirodi, a ipak lako dostupna. Kućica je okružena mirisnom četinarskom šumom i pogledom na proplanke, nudi potpuni mir i povezanost sa prirodom.\nPosebno smo uživali u dugim šetnjama i planinarenju – staze kreću direktno iz dvorišta kuće, lako su dostupne i vode kroz raznolike predele (uz potok, preko golih brda i kroz mirisnu četinarsku šumu. Možete sresti konje, kao i razne divlje i domaće životinje.",
@@ -83,5 +83,17 @@
         "answer": "Da, kućni ljubimci su dobrodošli! Brvnara Lina-Marija je okružena prirodom i idealna je za boravak sa psima ili drugim kućnim ljubimcima. Molimo vas da nas unapred obavestite ukoliko dolazite sa ljubimcem, kako bismo se najbolje pripremili za vaš dolazak."
       }
     }
+  },
+  "Contact": {
+    "title": "Imate Pitanja? Pišite nam",
+    "nameInput": "Ime",
+    "emailInput": "Email",
+    "messageInput": "Poruka"
+  },
+  "Footer": {
+    "contact": "Kontakt",
+    "descriptionTitle": "O Nama",
+    "description": "Naša brvnara “Lina‑Marija” napravljena je u potpunosti od drveta i izrađena sa ljubavlju. Nudimo pravo opuštanje, daleko od turističkih sela, i dočekujemo one koji traže prirodu, seosku idilu, avanturu i opuštanje. U zavisnosti od vremena, kuća nudi zadivljujući pogled na okolne planine i borove šume koje će umiriti vašu dušu. Izlazak i zalazak sunca mogu se doživeti iz kuće. U krugu od 100 km nalaze se prelepa prirodna područja i zanimljive znamenitosti. I, naravno, zimski sportovi na obližnjem Zlatiboru.",
+    "copyright": "©Drakula | Sva prava zadržana."
   }
 }

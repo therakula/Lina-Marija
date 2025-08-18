@@ -96,7 +96,7 @@ const FaqsSection = () => {
   const t = useTranslations("Faq");
 
   return (
-    <section className="faqs-section layout section">
+    <section className="faqs-section layout section" id="cestapitanja">
       <Title as="h2">{t("title")}</Title>
       {/* {faqs.map((faq, index) => {
         return <Faq item={faq} index={index} key={index} />;

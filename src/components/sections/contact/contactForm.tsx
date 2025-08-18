@@ -22,6 +22,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import { useTranslations } from "next-intl";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const ContactForm = () => {
@@ -33,7 +35,7 @@ const ContactForm = () => {
   const [btnDisabled, setBtnDisabled] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const [isVerified, setIsVerified] = useState<boolean>(false);
+  const t = useTranslations("Contact");
 
   useEffect(() => {
     if (btnDisabled) {
@@ -41,83 +43,41 @@ const ContactForm = () => {
     }
   }, [btnDisabled]);
 
-  const HandleCaptchaSubmission = async (token: string | null) => {
-    try {
-      if (token) {
-        const res = await fetch("/api/contact", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/application/json"
-          },
-          body: JSON.stringify({ token })
-        });
-        const { success } = await res.json();
-
-        if (success) {
-          setIsVerified(true);
-          console.log("Captcha verified successfully");
-        } else setIsVerified(false);
-      }
-    } catch (error) {
-      alert("Something went wrong with the captcha verification.");
-      console.log(error);
-      return false;
-    }
-  };
-
-  const handleChange = (token: string | null) => {
-    HandleCaptchaSubmission(token);
-  };
-  const handleExpired = () => {
-    setIsVerified(false);
-  };
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setBtnDisabled(true);
 
-    if (captchaRef.current) {
-      if (isVerified) {
-        console.log("Captcha verified successfully");
-        try {
-          await emailjs.sendForm(
-            "default_service",
-            process.env.EMAILJS_CONTACT_US_TEMPLATE_ID || "",
-            formRef.current!,
-            {
-              publicKey: process.env.EMAILJS_PUBLIC_KEY
-            }
-          );
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-          await emailjs.sendForm(
-            "default_service",
-            process.env.EMAILJS_AUTO_REPLY_TEMPLATE_ID || "",
-            formRef.current!,
-            {
-              publicKey: process.env.EMAILJS_PUBLIC_KEY
-            }
-          );
-          console.log("Both emails sent successfully");
-          setSent(true);
-        } catch (error) {
-          alert("Something went wrong");
-          console.log(error);
-        } finally {
-          captchaRef.current?.reset();
-          formRef.current?.reset();
-          // setLoading(false);
+    try {
+      await emailjs.sendForm(
+        "default_service",
+        process.env.NEXT_PUBLIC_EMAILJS_CONTACT_US_TEMPLATE_ID!,
+        formRef.current!,
+        {
+          publicKey
         }
-      } else {
-        console.log("Captcha verification failed");
-        setLoading(false);
-        setBtnDisabled(false);
-        return;
-      }
-    } else {
-      console.log("Captcha ref is not defined");
+      );
+
+      await emailjs.sendForm(
+        "default_service",
+        process.env.NEXT_PUBLIC_EMAILJS_AUTO_REPLY_TEMPLATE_ID!,
+        formRef.current!,
+        {
+          publicKey
+        }
+      );
+      console.log("Both emails sent successfully");
+      setSent(true);
+    } catch (error) {
+      alert("Something went wrong");
       setLoading(false);
-      setBtnDisabled(false);
+      console.log(error);
+    } finally {
+      captchaRef.current?.reset();
+      formRef.current?.reset();
+      // setLoading(false);
     }
   };
 
@@ -142,14 +102,10 @@ const ContactForm = () => {
     );
   });
 
-  useEffect(() => {
-    console.log("isVerified", isVerified);
-  }, [isVerified]);
-
   return (
     <section className="form-section full-width layout section" id="contact">
       <Title as="h2" className="contact-title">
-        Imate Pitanja? Pišite nam
+        {t("title")}
       </Title>
       <div
         className="form-wrapper--outer"
@@ -185,7 +141,7 @@ const ContactForm = () => {
               onSubmit={handleSubmit}
             >
               <div className="form__group">
-                <label htmlFor="name">Ime</label>
+                <label htmlFor="name">{t("nameInput")}</label>
                 <input
                   type="text"
                   id="name"
@@ -196,7 +152,7 @@ const ContactForm = () => {
                 />
               </div>
               <div className="form__group">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">{t("emailInput")}</label>
                 <input
                   type="email"
                   id="email"
@@ -207,7 +163,7 @@ const ContactForm = () => {
                 />
               </div>
               <div className="form__group">
-                <label htmlFor="message">Poruka</label>
+                <label htmlFor="message">{t("messageInput")}</label>
                 <textarea
                   id="message"
                   rows={10}
@@ -216,14 +172,6 @@ const ContactForm = () => {
                   placeholder="Message"
                 />
               </div>
-
-              <ReCAPTCHA
-                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
-                ref={captchaRef}
-                onChange={handleChange}
-                onExpired={handleExpired}
-                className="recaptcha"
-              />
 
               <button
                 // disabled={!isVerified}

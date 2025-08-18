@@ -4,26 +4,29 @@ h3,
 h4,
 h5 {
   text-wrap: balance;
-  font-family: "Rosehot", serif;
+  font-family: "Galter", serif;
+  letter-spacing: 0.06em;
 }
 
 h1 {
-  /* min: 90px max: 160px */
-  font-size: clamp(5.625rem, 4.459vw + 4.65rem, 10rem);
+  /* min: 130px max: 220px */
+  font-size: clamp(8.125rem, 5.769vw + 6.827rem, 13.75rem);
   line-height: 1;
+  font-weight: 400;
 }
 h2 {
-  /* min: 54px  max: 85px */
-  font-size: clamp(3.375rem, 2.039vw + 2.865rem, 5.313rem);
+  /* min: 68px  max: 92px */
+  font-size: clamp(4.25rem, 1.538vw + 3.904rem, 5.75rem);
   line-height: 1.1;
   word-spacing: 7px;
 }
 
 h3 {
-  /* min: 40px max: 68px */
-  font-size: clamp(3rem, 1.316vw + 2.671rem, 4.25rem);
+  /* min: 50px max: 78px */
+  font-size: clamp(3.125rem, 1.795vw + 2.721rem, 4.875rem);
 }
 
 h4 {
-  font-size: clamp(1.875rem, 0.526vw + 1.743rem, 2.375rem);
+  /* min: 40px max: 48px */
+  font-size: clamp(2.5rem, 0.513vw + 2.385rem, 3rem);
 }

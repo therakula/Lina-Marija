@@ -83,5 +83,17 @@
         "answer": "Yes — pets are welcome! Lina‑Marija cabin is surrounded by nature and ideal for guests traveling with dogs or other pets. Please let us know in advance if you’re bringing a pet so we can prepare your stay accordingly."
       }
     }
+  },
+  "Contact": {
+    "title": "Have Questions? Write to Us",
+    "nameInput": "Name",
+    "emailInput": "Email",
+    "messageInput": "Message"
+  },
+  "Footer": {
+    "contact": "Contact",
+    "descriptionTitle": "About Us",
+    "description": "Lina-Marija is a wooden cabin in the heart of nature, offering a peaceful retreat for those seeking tranquility and adventure. Enjoy hiking, stunning views, and a cozy atmosphere.",
+    "copyright": "©Drakula | All rights reserved."
   }
 }

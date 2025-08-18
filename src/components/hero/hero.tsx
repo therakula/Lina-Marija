@@ -5,7 +5,7 @@ import gsap from "gsap";
 
 import Image from "next/image";
 
-import heroimage from "../../../public/images/hero-image.jpg";
+import heroimage from "../../../public/images/hero-image-33.jpg";
 
 const rosehot = localFont({
   src: "../../../public/fonts/Rosehot.ttf",

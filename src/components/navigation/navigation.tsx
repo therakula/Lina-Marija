@@ -76,15 +76,15 @@ const Navigation = () => {
           </li>
           <li>
             {" "}
-            <Link href="#contact">{t("links.kontakt")}</Link>
-          </li>
-          <li>
-            {" "}
             <Link href="#recenzije">{t("links.recenzije")}</Link>
           </li>
           <li>
             {" "}
             <Link href="#cestapitanja">{t("links.faqs")}</Link>
+          </li>
+          <li>
+            {" "}
+            <Link href="#contact">{t("links.kontakt")}</Link>
           </li>
         </ul>
 

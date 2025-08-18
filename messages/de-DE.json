@@ -83,5 +83,17 @@
         "answer": "Ja – Haustiere sind herzlich willkommen! Die Lina‑Marija Blockhütte ist von Natur umgeben und ideal für Gäste mit Hunden oder anderen Haustieren. Bitte informieren Sie uns im Voraus, wenn Sie mit einem Haustier anreisen, damit wir Ihren Aufenthalt entsprechend vorbereiten können."
       }
     }
+  },
+  "Contact": {
+    "title": "Haben Sie Fragen? Schreiben Sie uns",
+    "nameInput": "Name",
+    "emailInput": "E-Mail",
+    "messageInput": "Nachricht"
+  },
+  "Footer": {
+    "contact": "Kontakt",
+    "descriptionTitle": "Über uns",
+    "description": "Lina-Marija ist eine Blockhütte im Herzen der Natur, die einen ruhigen Rückzugsort für alle bietet, die Ruhe und Abenteuer suchen. Genießen Sie Wanderungen, atemberaubende Ausblicke und eine gemütliche Atmosphäre.",
+    "copyright": "©Drakula | Alle Rechte vorbehalten."
   }
 }

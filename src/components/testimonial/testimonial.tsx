@@ -91,7 +91,10 @@ const TestimonialSwiper = () => {
   });
 
   return (
-    <section className="testimonial-section full-width layout section">
+    <section
+      className="testimonial-section full-width layout section"
+      id="recenzije"
+    >
       <Title as="h2" className="testimonial-title">
         {t("title")}
       </Title>
@@ -158,42 +161,6 @@ const TestimonialSwiper = () => {
               </SwiperSlide>
             );
           })}
-
-          {/* {testimonialArray.map((item, index) => {
-            return (
-              <SwiperSlide className="testimonial" key={index}>
-                {({ isActive }) => (
-                  <div
-                    className="swiper-item__wrapper"
-                    style={{ scale: isActive ? "1" : ".8" }}
-                  >
-                    <p>{item.text}</p>
-                    <div className="testimonial-name-image__wrapper">
-                      <Image
-                        className={`${isActive ? "active" : null}`}
-                        src={`/images/avatars/avatar-${item.male ? "m" : "w"}-${
-                          item.imgNumber
-                        }.png`}
-                        alt="avatar"
-                        width={70}
-                        height={70}
-                      />{" "}
-                      {item.name},{" "}
-                      <span
-                        style={{
-                          fontStyle: "italic",
-                          color: "var(--accentColor)",
-                          fontWeight: "normal"
-                        }}
-                      >
-                        {item.from}
-                      </span>
-                    </div>
-                  </div>
-                )}
-              </SwiperSlide>
-            );
-          })} */}
         </Swiper>
       </div>
     </section>

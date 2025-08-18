@@ -32,6 +32,7 @@ ul.navigation-links {
   gap: 1rem;
   font-size: clamp(1.063rem, 0.25vw + 1.012rem, 1.313rem);
   list-style: none;
+  color: var(--lightColor);
 }
 
 ul.navigation-links li {
@@ -153,6 +154,7 @@ ul.navigation-links li:hover::before {
     flex-direction: column;
     gap: 1rem;
     font-size: 2rem;
+    color: var(--lightColor);
   }
 }
 

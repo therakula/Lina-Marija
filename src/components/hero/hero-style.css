@@ -17,4 +17,5 @@ section.hero h1 {
   margin-block-end: calc(3vw + 2rem);
   opacity: 0;
   transform: translateY(50px);
+  color: var(--lightColor);
 }
