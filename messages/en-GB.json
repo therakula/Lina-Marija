@@ -9,5 +9,91 @@
       "faqs": "FAQs"
     },
     "rezervisi": "Book"
+  },
+  "About": {
+    "title": "About Us",
+    "text": {
+      "part1": "Our cabin Lina-Marija is built entirely of wood and crafted with love.\nWe offer true relaxation, away from tourist villages, welcoming those who seek nature, rural idyll, adventure, and relaxation.\nDepending on the weather, the house offers breathtaking views of the surrounding mountains and pine forests that will soothe your soul.\nSunrises and sunsets can be experienced from the house.\nWithin a 100 km radius, there are beautiful natural areas and interesting sights.\nAnd of course, winter sports at the nearby Zlatibor.",
+      "part2": "The village is in front of us – behind us begins the path into the wilderness.\nAfter a one-hour hike to the mountain peak, you will be rewarded, in mostly good weather,\nwith a stunning panoramic view of the Dinaric Alps Zlatibor and\nTara National Park, extending to Ovčar and Kablara, which can also be enjoyed from the house.\nThe misty river that forms intermittently on the plateau depending on the weather,\nand then cascades down into the valley before our eyes, is also unforgettable when viewed from the mountain."
+    }
+  },
+  "Gallery": {
+    "title": "Photo Gallery",
+    "text": "Experience the charm of nature and the warmth of rural life.\nOur wooden cabin, nestled in untouched nature, offers an authentic escape from everyday life –\nsurrounded by fragrant pines, hills, and tranquility.\nThe lovingly decorated interior, an outdoor barbecue area, and the stunning landscapes around the house make every moment special.\nThe photographs capture a part of that magic."
+  },
+  "Map": {
+    "title": "Where Are We Located?",
+    "text": {
+      "part1": "Surrounded by beautiful nature reserves in the midst of picturesque landscapes,\nwe are centrally located, just 2 km from the main traffic connection\nbetween Bosnia and Herzegovina and Serbia, and the Branešci railway station,\nwhich is on the railway line between Belgrade and Podgorica.",
+      "part2": "Nearby are also well-known places like Višegrad, 50 km away,\nin the historically rich Bosnia and Herzegovina, home to the stunning\n\"Bridge over the Drina,\" which inspired author Ivo Andrić to write his namesake novel,\nfor which he received the Nobel Prize in Literature.",
+      "part3": "The nature reserves Tara, Zlatibor, and Mokra Gora are also easily accessible\nwithin less than 50 kilometers.",
+      "location": "Podgorica 36, Šljivovica, Sainovina, Čajetina"
+    }
+  },
+  "Reviews": {
+    "title": "What others say about us",
+    "data": {
+      "testimonial1": {
+        "comment": "Lina-Marija cabin is a true paradise for lovers of pristine nature, hiking, and tranquility. It is located in untouched nature, yet still easily accessible. The cabin is surrounded by fragrant coniferous forest and overlooks meadows, offering complete peace and a deep connection with nature.\nWe especially enjoyed long walks and hikes — the trails start directly from the house’s yard, are easily accessible, and lead through diverse landscapes (along a stream, across bare hills, and through fragrant coniferous woods. You might encounter horses, as well as various wild and domestic animals.",
+        "date": "May 2025"
+      },
+      "testimonial2": {
+        "comment": "Beautiful surroundings, at a very short distance from the center of Zlatibor, provide an authentic mountain experience. An extremely professional host, everything was clean and just as agreed.\nRecommendation.",
+        "date": "February 2025"
+      },
+      "testimonial3": {
+        "comment": "The place is magical, wonderful, and looks much, much better than you can see in the photos. The surroundings are beautiful, and the interior is very cozy.\nI usually rent accommodation just to spend the night and continue my adventure, as was the case this time. But the place is so peaceful and lovely that I’m sure we’ll come back for a longer stay just to enjoy it. Thanks to Radovan and his wife for such a great place to stay.",
+        "date": "May 2025"
+      },
+      "testimonial4": {
+        "comment": "A very comfortable, modern house in a remote location — surrounded by peace, quiet, and harmony with nature. The house had everything needed for everyday life. Everything — the house itself, the dishes, the linens — was clean and fresh. The internet worked perfectly. In short, everything needed for a comfortable stay was there. But honestly, even if there had been nothing at all, this place is so healing, so peaceful and beautiful, that everything else fades into the background.\nI especially want to mention the hosts. Radovan and Helga are incredibly kind, open, and warm-hearted people. I wholeheartedly recommend staying here — this is truly a special place.",
+        "date": "July 2025"
+      }
+    }
+  },
+  "Faq": {
+    "title": "Frequently Asked Questions",
+    "data": {
+      "question1": {
+        "question": "Where is the Lina‑Marija cabin located?",
+        "answer": "The cabin is located in a village in Serbia, just off the main highway that connects Bosnia & Herzegovina and Serbia, near the Branешci railway station between Belgrade and Podgorica."
+      },
+      "question2": {
+        "question": "Is the cabin available year‑round?",
+        "answer": "Yes — the cabin is available throughout the year, offering both summer and winter amenities, including heating, hot water, and cozy winter comforts like a pellet stove and bathroom heater."
+      },
+      "question3": {
+        "question": "What activities are available in the surrounding area?",
+        "answer": "<ul><li>Hiking directly from the backyard</li><li>Visits to the Tara, Zlatibor, and Mokra Gora national parks</li><li>Zlatibor cable car</li><li>Kustendorf / Drvengrad</li><li>Đurđevića Tara bridge (Montenegro)</li><li>Mileševa monastery</li><li>Tesla hydroelectric power plant and museum</li><li>Jokino Vrelo spring</li></ul>"
+      },
+      "question4": {
+        "question": "How many people can the cabin accommodate?",
+        "answer": "The cabin can comfortably host up to 6 guests:<ul><li>Four beds in the gallery (two doubles that can be put together)</li><li>One pull‑out sofa in the living room</li></ul>"
+      },
+      "question5": {
+        "question": "Is the cabin suitable for children and families?",
+        "answer": "Absolutely! The house is peaceful, safe, surrounded by nature, and has a large yard — it’s ideal for families with children."
+      },
+      "question6": {
+        "question": "Is there a kitchen and cooking equipment?",
+        "answer": "Yes — the kitchen is fully equipped with:<ul><li>Cooking and baking utensils</li><li>Dinnerware for six</li><li>Induction hob, electric kettle, and egg boiler</li><li>Refrigerator and stove</li></ul>"
+      },
+      "question7": {
+        "question": "Are pets allowed?",
+        "answer": "Yes — pets are welcome! Lina‑Marija cabin is surrounded by nature and ideal for guests traveling with dogs or other pets. Please let us know in advance if you’re bringing a pet so we can prepare your stay accordingly."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Have Questions? Write to Us",
+    "nameInput": "Name",
+    "emailInput": "Email",
+    "messageInput": "Message"
+  },
+  "Footer": {
+    "contact": "Contact",
+    "descriptionTitle": "About Us",
+    "description": "Lina-Marija is a wooden cabin in the heart of nature, offering a peaceful retreat for those seeking tranquility and adventure. Enjoy hiking, stunning views, and a cozy atmosphere.",
+    "copyright": "©Drakula | All rights reserved."
   }
 }

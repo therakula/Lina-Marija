@@ -7,7 +7,7 @@ import LangSwitcher from "../language-switcher/language-switcher";
 import localFont from "next/font/local";
 import { usePathname } from "next/navigation";
 
-import "./navigation-style.css";
+import "./navigationStyle.css";
 
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 
@@ -51,7 +51,7 @@ const Navigation = () => {
 
   return (
     <header className={`header ${cabinRegular.className}`} ref={navRef}>
-      <div className="navigation-wrapper">
+      <nav className="navigation-wrapper">
         <div className="logo-wrapper">
           <Link href="#home">
             <Image
@@ -76,15 +76,15 @@ const Navigation = () => {
           </li>
           <li>
             {" "}
-            <Link href="#contact">{t("links.kontakt")}</Link>
-          </li>
-          <li>
-            {" "}
             <Link href="#recenzije">{t("links.recenzije")}</Link>
           </li>
           <li>
             {" "}
             <Link href="#cestapitanja">{t("links.faqs")}</Link>
+          </li>
+          <li>
+            {" "}
+            <Link href="#contact">{t("links.kontakt")}</Link>
           </li>
         </ul>
 
@@ -110,7 +110,7 @@ const Navigation = () => {
         ) : (
           <BurgerButton />
         )}
-      </div>
+      </nav>
 
       <Sidebar t={t} />
     </header>

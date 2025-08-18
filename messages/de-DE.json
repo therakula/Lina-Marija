@@ -9,5 +9,91 @@
       "faqs": "FAQ"
     },
     "rezervisi": "Jetzt buchen"
+  },
+  "About": {
+    "title": "Über uns",
+    "text": {
+      "part1": "Unsere Blockhütte Lina-Marija ist komplett aus Holz gebaut und mit Liebe gefertigt.\nWir bieten echte Entspannung, fernab von touristischen Dörfern, und heißen diejenigen willkommen, die Natur, ländliche Idylle, Abenteuer und Entspannung suchen.\nJe nach Wetter bietet das Haus einen atemberaubenden Blick auf die umliegenden Berge und Kiefernwälder, die Ihre Seele beruhigen werden.\nSonnenauf- und -untergänge können vom Haus aus erlebt werden.\nIn einem Umkreis von 100 km befinden sich wunderschöne Naturschutzgebiete und interessante Sehenswürdigkeiten.\nUnd natürlich Wintersportmöglichkeiten am nahegelegenen Zlatibor.",
+      "part2": "Das Dorf liegt vor uns – hinter uns beginnt der Weg in die Wildnis.\nNach einer einstündigen Wanderung zum Berggipfel werden Sie belohnt, bei meist schönem Wetter,\nmit einem atemberaubenden Panoramablick auf die Dinarischen Alpen Zlatibor und\nNationalpark Tara, bis hin zu Ovčar und Kablara, die ebenfalls vom Haus aus genossen werden können.\nDer neblige Fluss, der je nach Wetterlage zeitweise auf dem Hochplateau entsteht\nund dann kaskadenartig ins Tal vor unseren Augen fließt, ist ebenfalls unvergesslich, wenn"
+    }
+  },
+  "Gallery": {
+    "title": "Fotogalerie",
+    "text": "Erleben Sie den Charme der Natur und die Wärme des Landlebens.\nUnsere Blockhütte, eingebettet in unberührter Natur, bietet einen authentischen Rückzugsort vom Alltag –\numgeben von duftenden Kiefern, Hügeln und Stille.\nDie liebevoll eingerichtete Innenausstattung, ein Grillplatz im Freien und die atemberaubende Landschaft rund um das Haus machen jeden Moment besonders.\nDie Fotografien fangen einen Teil dieser Magie ein."
+  },
+  "Map": {
+    "title": "Wo befinden wir uns?",
+    "text": {
+      "part1": "Umgeben von wunderschönen Naturschutzgebieten inmitten malerischer Landschaften,\nbefinden wir uns zentral, nur 2 km von der Hauptverkehrsverbindung\nzwischen Bosnien und Herzegowina und Serbien entfernt, sowie dem Bahnhof Branešci,\nder sich auf der Bahnstrecke zwischen Belgrad und Podgorica befindet.",
+      "part2": "In der Nähe befinden sich auch bekannte Orte wie Višegrad, 50 km entfernt,\nin der geschichtlich reichen Bosnien und Herzegowina, Heimat der beeindruckenden\n„Brücke über die Drina“, die den Autor Ivo Andrić inspirierte, seinen gleichnamigen Roman zu schreiben,\nfür den er den Nobelpreis für Literatur erhielt.",
+      "part3": "Die Naturreservate Tara, Zlatibor und Mokra Gora sind ebenfalls leicht erreichbar\nin weniger als 50 Kilometern.",
+      "location": "Podgorica 36, Šljivovica, Sainovina, Čajetina"
+    }
+  },
+  "Reviews": {
+    "title": "Was andere über uns sagen",
+    "data": {
+      "testimonial1": {
+        "comment": "Die Blockhütte Lina-Marija ist ein wahres Paradies für Liebhaber unberührter Natur, Wandern und Ruhe. Sie liegt in unberührter Natur und ist dennoch leicht erreichbar. Die Hütte ist von duftendem Nadelwald umgeben und bietet einen Blick auf Wiesen, der völlige Frieden und eine tiefe Verbundenheit mit der Natur bietet.\nWir haben besonders lange Spaziergänge und Wanderungen genossen – die Wege beginnen direkt im Garten des Hauses, sind leicht zugänglich und führen durch abwechslungsreiche Landschaften (entlang eines Baches, über kahle Hügel und durch duftenden Nadel.",
+        "date": "Mai 2025"
+      },
+      "testimonial2": {
+        "comment": "Schöne Umgebung, nur eine sehr kurze Entfernung vom Zentrum von Zlatibor entfernt, bietet ein authentisches Bergerlebnis. Ein äußerst professioneller Gastgeber, alles war sauber und genau wie vereinbart.\nEmpfehlung.",
+        "date": "Februar 2025"
+      },
+      "testimonial3": {
+        "comment": "Der Ort ist magisch, wunderbar und sieht viel, viel besser aus als auf den Fotos. Die Umgebung ist wunderschön, und das Interieur ist sehr gemütlich.\nNormalerweise miete ich Unterkünfte nur zum Übernachten und um mein Abenteuer fortzusetzen, wie es auch diesmal der Fall war. Aber der Ort ist so friedlich und schön, dass ich sicher bin, dass wir für einen längeren Aufenthalt zurückkehren werden, nur um ihn zu genießen. Danke an Radovan und seine Frau für diesen großartigen Ort.",
+        "date": "Mai 2025"
+      },
+      "testimonial4": {
+        "comment": "Ein sehr komfortables, modernes Haus an einem abgelegenen Ort – umgeben von Frieden, Ruhe und Harmonie mit der Natur. Das Haus hatte alles, was für den Alltag benötigt wird. Alles – das Haus selbst, das Geschirr, die Bettwäsche – war sauber und frisch. Das Internet funktionierte einwandfrei. Kurz gesagt, alles, was für einen komfortablen Aufenthalt benötigt wird, war vorhanden. Aber ehrlich gesagt, selbst wenn es nichts gegeben hätte, dieser Ort ist so heilend, so friedlich und schön, dass alles andere in den Hintergrund tritt.\nIch möchte besonders die Gastgeber erwähnen. Radovan und Helga sind unglaublich freundliche, offene und herzliche Menschen. Ich empfehle einen Aufenthalt hier von ganzem Herzen – dies ist wirklich ein besonderer Ort.",
+        "date": "Juli 2025"
+      }
+    }
+  },
+  "Faq": {
+    "title": "Häufig gestellte Fragen",
+    "data": {
+      "question1": {
+        "question": "Wo befindet sich die Lina‑Marija Blockhütte?",
+        "answer": "Die Blockhütte befindet sich in einem Dorf in Serbien, nahe der Hauptverkehrsverbindung zwischen Bosnien & Herzegowina und Serbien und unweit des Bahnhofs Branešci zwischen Belgrad und Podgorica."
+      },
+      "question2": {
+        "question": "Ist das Haus das ganze Jahr über nutzbar?",
+        "answer": "Ja – die Blockhütte ist das ganze Jahr verfügbar und bietet sowohl im Sommer als auch im Winter Komfort, einschließlich Heizung, Warmwasser und winterlichem Komfort wie Pelletofen und Badezimmerheizung."
+      },
+      "question3": {
+        "question": "Welche Aktivitäten gibt es in der Umgebung?",
+        "answer": "<ul><li>Wandern direkt vom Grundstück aus</li><li>Nationale Parks Tara, Zlatibor und Mokra Gora</li><li>Zlatibor‑Seilbahn</li><li>Kustendorf / Drvengrad</li><li>Đurđevića‑Tara‑Brücke (Montenegro)</li><li>Mileševa‑Kloster</li><li>Tesla‑Wasserkraftwerk und Museum</li><li>Quelle Jokino Vrelo</li></ul>"
+      },
+      "question4": {
+        "question": "Wie viele Gäste können in der Blockhütte übernachten?",
+        "answer": "Die Blockhütte bietet Platz für bis zu 6 Personen: <ul><li>Vier Betten in der Galerie (zwei Doppelbetten, die verbunden werden können)</li><li>Ein ausziehbares Sofa im Wohnzimmer</li></ul>"
+      },
+      "question5": {
+        "question": "Ist das Haus für Familien mit Kindern geeignet?",
+        "answer": "Absolut! Das Haus ist ruhig, sicher, von Natur umgeben und verfügt über einen großen Garten – ideal für Familien mit Kindern."
+      },
+      "question6": {
+        "question": "Gibt es eine Küche und eine vollständige Küchenausstattung?",
+        "answer": "Ja – die Küche enthält: <ul><li>Koch‑ und Backutensilien</li><li>Geschirr für 6 Personen</li><li>Induktionskochfeld, Wasserkocher, Eierkocher</li><li>Kühlschrank und Herd</li></ul>"
+      },
+      "question7": {
+        "question": "Sind Haustiere erlaubt?",
+        "answer": "Ja – Haustiere sind herzlich willkommen! Die Lina‑Marija Blockhütte ist von Natur umgeben und ideal für Gäste mit Hunden oder anderen Haustieren. Bitte informieren Sie uns im Voraus, wenn Sie mit einem Haustier anreisen, damit wir Ihren Aufenthalt entsprechend vorbereiten können."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Haben Sie Fragen? Schreiben Sie uns",
+    "nameInput": "Name",
+    "emailInput": "E-Mail",
+    "messageInput": "Nachricht"
+  },
+  "Footer": {
+    "contact": "Kontakt",
+    "descriptionTitle": "Über uns",
+    "description": "Lina-Marija ist eine Blockhütte im Herzen der Natur, die einen ruhigen Rückzugsort für alle bietet, die Ruhe und Abenteuer suchen. Genießen Sie Wanderungen, atemberaubende Ausblicke und eine gemütliche Atmosphäre.",
+    "copyright": "©Drakula | Alle Rechte vorbehalten."
   }
 }

@@ -9,28 +9,22 @@ import {
 
 import "./footerStyle.css";
 
+import { useTranslations } from "next-intl";
+
 import { Title } from "../title/title";
 
 const Footer = () => {
+  const t = useTranslations("Footer");
   return (
     <footer className="footer section layout">
       <div className="footer-content breakout">
         <Title as="h3">Lina Marija</Title>
         <div className="about">
-          <Title as="h4">O Nama</Title>
-          <p>
-            Naša brvnara, „Lina-Marija“, napravljena je u potpunosti od drveta i
-            izrađena sa ljubavlju. Nudimo pravo opuštanje, daleko od turističkih
-            sela, i dočekujemo one koji traže prirodu, seosku idilu, avanturu i
-            opuštanje. U zavisnosti od vremena, kuća nudi zadivljujući pogled na
-            okolne planine i borove šume koje će umiriti vašu dušu. Izlazak i
-            zalazak sunca mogu se doživeti iz kuće. U krugu od 100 km nalaze se
-            prelepa prirodna područja i zanimljive znamenitosti. I, naravno,
-            zimski sportovi na obližnjem Zlatiboru.
-          </p>
+          <Title as="h4">{t("descriptionTitle")}</Title>
+          <p>{t("description")}</p>
         </div>
         <div className="contact">
-          <Title as="h4">Kontakt</Title>
+          <Title as="h4">{t("contact")}</Title>
           <div className="phone">
             <span>
               <FaPhone className="icon" />{" "}
@@ -57,9 +51,8 @@ const Footer = () => {
         </div>
 
         <div className="rights">
-          <span>&copy;</span>
-          <span>Drakula | </span>
-          <span>All rights reserved</span>
+          {/* <span>&copy;</span> */}
+          <span>{t("copyright")}</span>
         </div>
       </div>
     </footer>

@@ -9,5 +9,91 @@
       "faqs": "Česta Pitanja"
     },
     "rezervisi": "Rezerviši"
+  },
+  "About": {
+    "title": "O Nama",
+    "text": {
+      "part1": "Naša brvnara Lina-Marija, napravljena je u potpunosti od drveta i izrađena sa ljubavlju.\nNudimo pravo opuštanje, daleko od turističkih sela, i dočekujemo one koji traže prirodu, seosku idilu, avanturu i opuštanje.\nU zavisnosti od vremena, kuća nudi zadivljujući pogled na okolne planine i borove šume koje će umiriti vašu dušu.\nIzlazak i zalazak sunca mogu se doživeti iz kuće.\nU krugu od 100 km nalaze se prelepa prirodna područja i zanimljive znamenitosti.\nI, naravno, zimski sportovi na obližnjem Zlatiboru.",
+      "part2": "Selo je ispred – iza nas počinje put u divljinu.\nNakon jednosatnog uspona do planinskog vrha, bićete nagrađeni, po uglavnom lepom vremenu,\nzadivljujućim panoramskim pogledom na Dinarske planine Zlatibor i\nplanine Nacionalnog parka Tara, sve do Ovčara i Kablara, u kojima se\ntakođe može uživati iz kuće.\nMaglovita reka, koja se povremeno formira\nna visoravni u zavisnosti od vremena, a zatim se kaskadno spušta u\ndolinu pred našim očima, takođe je nezaboravna kada se gleda sa planine."
+    }
+  },
+  "Gallery": {
+    "title": "Foto Galerija",
+    "text": "Doživite čar prirode i toplinu života na selu.\nNaša drvena brvnara, smeštena usred netaknute prirode, pruža autentičan beg od svakodnevice –\nokružena mirisnim borovima, brežuljcima i tišinom.\nUnutrašnjost uređena s ljubavlju, mesto za roštilj na otvorenom i zadivljujući pejzaži oko kuće čine svaki trenutak posebnim.\nFotografije prenose deo te magije."
+  },
+  "Map": {
+    "title": "Gde se Nalazimo?",
+    "text": {
+      "part1": "Okruženi divnim rezervatima prirode usred slikovitog pejzaža,\nnalazimo se centralno, na samo 2 km od glavne saobraćajne veze\nizmeđu BiH i Srbije, i železničke stanice Branešci, koja se nalazi\nna železničkoj pruzi između Beograda i Podgorice.",
+      "part2": "U blizini su i poznata mesta, poput Višegrada, udaljenog 50 km,\nu istorijski bogatoj Bosni i Hercegovini, domu zapanjujućeg\n„Mosta na Drini“, koji je inspirisao autora Iva Andrića da napiše\nistoimeni roman, za koji je dobio Nobelovu nagradu za književnost.",
+      "part3": "Rezervati prirode Tara, Zlatibor i Mokra Gora lako su dostupni\nna manje od 50 kilometara.",
+      "location": "Podgorica 36, Šljivovica, Sainovina, Čajetina"
+    }
+  },
+  "Reviews": {
+    "title": "Sta drugi kažu o nama",
+    "data": {
+      "testimonial1": {
+        "comment": "Kućica Lina-Marija je pravi raj za ljubitelje čiste prirode, planinarenja i tišine. Smeštena je u netaknutoj prirodi, a ipak lako dostupna. Kućica je okružena mirisnom četinarskom šumom i pogledom na proplanke, nudi potpuni mir i povezanost sa prirodom.\nPosebno smo uživali u dugim šetnjama i planinarenju – staze kreću direktno iz dvorišta kuće, lako su dostupne i vode kroz raznolike predele (uz potok, preko golih brda i kroz mirisnu četinarsku šumu. Možete sresti konje, kao i razne divlje i domaće životinje.",
+        "date": "Maj 2025"
+      },
+      "testimonial2": {
+        "comment": "Prelep ambijent, na jako maloj udaljenosti od centra Zlatibora, pruža autentičan doživljaj planine. Maksimalno korektan domaćin, sve čisto i sve po dogovoru.\nPreporuka.",
+        "date": "Februar 2025"
+      },
+      "testimonial3": {
+        "comment": "Mesto je magično, sjajno i izgleda mnogo, mnogo bolje nego što možete videti na fotografijama. Okolina je predivna, enterijer veoma udoban.\nObično iznajmljujem smeštaj samo da prenoćim i nastavim avanturu, kao što je bilo i u ovom slučaju. Ali mesto je toliko mirno i lepo da sam siguran da ćemo se vratiti na duži period samo da uživamo u njemu. Hvala Radovanu i njegovoj ženi na tako sjajnom smeštaju.",
+        "date": "Maj 2025"
+      },
+      "testimonial4": {
+        "comment": "Vrlo udobna, moderna kuća na udaljenoj lokaciji — okružena mirom, tišinom i harmonijom s prirodom. Kuća je imala sve što je potrebno za svakodnevni život. Sve — sama kuća, posuđe, posteljina — bilo je čisto i sveže. Internet je radio odlično. Ukratko, sve što je potrebno za udoban boravak bilo je tu. Ali iskreno, čak i da nije bilo ničega, ovo mesto je toliko isceljujuće, toliko mirno i prelepo, da sve ostalo pada u drugi plan.\nPosebno želim da spomenem domaćine. Radovan i Helga su neverovatno ljubazni, otvoreni i srdačni ljudi. Od srca preporučujem boravak ovde — ovo je zaista posebno mesto.",
+        "date": "Jul 2025"
+      }
+    }
+  },
+  "Faq": {
+    "title": "Česta Pitanja",
+    "data": {
+      "question1": {
+        "question": "Gde se nalazi brvnara Lina-Marija?",
+        "answer": "Brvnara se nalazi u selu u Srbiji, u blizini glavne saobraćajne veze između BiH i Srbije i železničke stanice Branešci, između Beograda i Podgorice."
+      },
+      "question2": {
+        "question": "Da li je kuća dostupna tokom cele godine?",
+        "answer": "Da, brvnara je dostupna tokom cele godine i nudi sadržaje i leti i zimi, uključujući grejanje, toplu vodu i zimsku udobnost (peć na pelet, grejač u kupatilu itd)."
+      },
+      "question3": {
+        "question": "Koje aktivnosti su dostupne u okolini?",
+        "answer": "<ul><li>Planinarenje direktno iz dvorišta</li><li>Nacionalni parkovi Tara, Zlatibor i Mokra Gora</li><li>Gondola na Zlatiboru</li><li>Kustendorf / Drvengrad</li><li>Most na Đurđevića Tari (Crna Gora)</li><li>Manastir Mileševa</li><li>Tesla hidroelektrana i muzej</li><li>Jokino Vrelo</li></ul>"
+      },
+      "question4": {
+        "question": "Koliko osoba može da se smesti u brvnaru?",
+        "answer": "Brvnara je opremljena za do 6 osoba: <ul><li>4 kreveta u galeriji (2+2 koji se mogu spojiti)</li><li>1 kauč na razvlačenje u dnevnoj sobi</li></ul>"
+      },
+      "question5": {
+        "question": "Da li je kuća pogodna za decu i porodice?",
+        "answer": "Apsolutno! Kuća je mirna, sigurna, okružena prirodom i ima veliko dvorište — idealno za porodice sa decom."
+      },
+      "question6": {
+        "question": "Postoji li kuhinja i oprema za kuvanje?",
+        "answer": "Da, kuhinja sadrži: <ul><li>Pribor za kuvanje i pečenje</li><li>Posuđe za 6 osoba</li><li>Indukcionu ploču, kuvalo za vodu, kuvalo za jaja</li><li>Frižider i šporet</li></ul>"
+      },
+      "question7": {
+        "question": "Da li su kućni ljubimci dozvoljeni?",
+        "answer": "Da, kućni ljubimci su dobrodošli! Brvnara Lina-Marija je okružena prirodom i idealna je za boravak sa psima ili drugim kućnim ljubimcima. Molimo vas da nas unapred obavestite ukoliko dolazite sa ljubimcem, kako bismo se najbolje pripremili za vaš dolazak."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Imate Pitanja? Pišite nam",
+    "nameInput": "Ime",
+    "emailInput": "Email",
+    "messageInput": "Poruka"
+  },
+  "Footer": {
+    "contact": "Kontakt",
+    "descriptionTitle": "O Nama",
+    "description": "Naša brvnara “Lina‑Marija” napravljena je u potpunosti od drveta i izrađena sa ljubavlju. Nudimo pravo opuštanje, daleko od turističkih sela, i dočekujemo one koji traže prirodu, seosku idilu, avanturu i opuštanje. U zavisnosti od vremena, kuća nudi zadivljujući pogled na okolne planine i borove šume koje će umiriti vašu dušu. Izlazak i zalazak sunca mogu se doživeti iz kuće. U krugu od 100 km nalaze se prelepa prirodna područja i zanimljive znamenitosti. I, naravno, zimski sportovi na obližnjem Zlatiboru.",
+    "copyright": "©Drakula | Sva prava zadržana."
   }
 }
