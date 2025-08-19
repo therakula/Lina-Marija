@@ -1,4 +1,6 @@
 import "./successStyle.css";
+import { useTranslations } from "next-intl";
+
 const Success = ({
   width,
   w2,
@@ -8,6 +10,8 @@ const Success = ({
   w2: number | undefined;
   h2: number | undefined;
 }) => {
+  const t = useTranslations("Contact");
+
   return (
     <div
       className="circle-wrapper"
@@ -36,7 +40,7 @@ const Success = ({
             className="tick"
           />
         </svg>
-        <p className="success-message">Poruka uspesno poslata!</p>
+        <p className="success-message">{t("successMessage")}</p>
       </div>
     </div>
   );

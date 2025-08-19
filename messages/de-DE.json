@@ -88,7 +88,8 @@
     "title": "Haben Sie Fragen? Schreiben Sie uns",
     "nameInput": "Name",
     "emailInput": "E-Mail",
-    "messageInput": "Nachricht"
+    "messageInput": "Nachricht",
+    "successMessage": "Nachricht erfolgreich gesendet!"
   },
   "Footer": {
     "contact": "Kontakt",

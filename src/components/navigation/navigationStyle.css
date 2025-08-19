@@ -173,7 +173,7 @@ ul.navigation-links li:hover::before {
   }
 }
 
-@media screen and (width <= 960px) {
+@media screen and (width <= 1060px) {
   ul.navigation-links {
     gap: 0.6rem;
   }

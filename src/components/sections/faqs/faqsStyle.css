@@ -11,6 +11,10 @@
   }
 }
 
+.faqs-container {
+  padding-inline-start: 2rem;
+}
+
 .faq-input {
   display: none;
 }

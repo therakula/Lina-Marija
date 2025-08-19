@@ -101,13 +101,14 @@ const FaqsSection = () => {
       {/* {faqs.map((faq, index) => {
         return <Faq item={faq} index={index} key={index} />;
       })} */}
+      <div className="faqs-container">
+        {keys.map((key, index) => {
+          const question = t(`data.${key}.question`);
+          const answer = t.raw(`data.${key}.answer`);
 
-      {keys.map((key, index) => {
-        const question = t(`data.${key}.question`);
-        const answer = t.raw(`data.${key}.answer`);
-
-        return <Faq item={{ question, answer }} index={index} key={index} />;
-      })}
+          return <Faq item={{ question, answer }} index={index} key={index} />;
+        })}
+      </div>
     </section>
   );
 };

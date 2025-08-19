@@ -1,6 +1,6 @@
 :root {
   /* colors */
-  --lightColor: oklch(97.116% 0.02119 98.155);
+  --lightColor: #f9f6e6;
   /* --darkColor: oklch(24.166% 0.02651 231.085); */
   --darkColor: oklch(32.607% 0.00973 164.545);
   --lightDarkColor: oklch(from var(--darkColor) calc(l/2 + 0.3) c h);

@@ -12,6 +12,7 @@
 .footer h3 {
   position: relative;
   align-self: center;
+  color: var(--lightDarkColor);
 }
 
 .footer h4 {

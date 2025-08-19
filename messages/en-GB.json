@@ -88,7 +88,8 @@
     "title": "Have Questions? Write to Us",
     "nameInput": "Name",
     "emailInput": "Email",
-    "messageInput": "Message"
+    "messageInput": "Message",
+    "successMessage": "Message sent successfully!"
   },
   "Footer": {
     "contact": "Contact",
