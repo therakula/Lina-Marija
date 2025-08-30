@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
 import Success from "./success";
 
 import { IoIosSend } from "react-icons/io";
+import { SubmitButtonLoader } from "@/components/loaders/submit-button-loader";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +28,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
-  const captchaRef = useRef<ReCAPTCHA>(null);
   const formWrapperRef = useRef<HTMLDivElement | null>(null);
   const [sent, setSent] = useState<boolean>(false);
 
@@ -50,6 +49,7 @@ const ContactForm = () => {
 
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
+    console.log(publicKey);
     try {
       await emailjs.sendForm(
         "default_service",
@@ -72,13 +72,12 @@ const ContactForm = () => {
       setSent(true);
     } catch (error) {
       alert("Something went wrong");
-      setLoading(false);
       console.log(error);
     } finally {
-      captchaRef.current?.reset();
       formRef.current?.reset();
       // setLoading(false);
     }
+    setLoading(false);
   };
 
   useGSAP(() => {
@@ -122,7 +121,7 @@ const ContactForm = () => {
           <div className="form-wrapper">
             <div className="form-logo--wrapper">
               <div className="form-logo--wrapper-inner">
-                <Link href="#home">
+                <Link href="#home" className="contact-logo__link">
                   <Image
                     fill
                     src="/images/logo-2.png"
@@ -176,9 +175,9 @@ const ContactForm = () => {
               <button
                 // disabled={!isVerified}
                 type="submit"
-                className={`submit-btn ${loading ? "animation" : ""}`}
+                className="submit-btn"
               >
-                <IoIosSend />
+                {loading ? <SubmitButtonLoader /> : <IoIosSend />}{" "}
               </button>
             </form>
           </div>

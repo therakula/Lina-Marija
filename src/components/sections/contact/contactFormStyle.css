@@ -4,7 +4,7 @@
   --clr-error: oklch(59.153% 0.20203 21.222);
   --clr-warning: oklch(95.016% 0.06908 92.115);
 
-  --submit-btn--width: 90px;
+  --submit-btn--width: 100px;
 
   --border-radius-xl: 15px;
   --border-radius-l: 10px;
@@ -79,7 +79,7 @@ textarea:focus:invalid {
 /* ---SUBMIT BUTTON--- */
 .submit-btn {
   --font-size: calc((var(--submit-btn--width) / 2) - 8px);
-  border-radius: var(--border-radius-s);
+  border-radius: var(--border-radius-l);
   border: none;
   width: var(--submit-btn--width);
   aspect-ratio: 2/1;
@@ -117,6 +117,13 @@ textarea[name="message"] {
   & .form-logo--wrapper-inner {
     border-radius: 50%;
     position: relative;
+    width: calc(var(--width) - (var(--padding) * 2));
+    aspect-ratio: 1;
+  }
+
+  & .contact-logo__link {
+    position: relative;
+    display: block;
     width: calc(var(--width) - (var(--padding) * 2));
     aspect-ratio: 1;
   }
@@ -159,11 +166,6 @@ input:focus:invalid + .warning {
   color: var(--lightColor);
   text-align: center;
   margin-block: 0.5rem 1rem;
-}
-
-/* Style recaptcha */
-.recaptcha {
-  justify-content: center;
 }
 
 @keyframes l21 {
