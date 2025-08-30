@@ -113,7 +113,9 @@ const PhotoGallery = () => {
       <Title as="h2" className="photo-section--title breakout">
         {t("title")}
       </Title>
-      <p className="breakout photo-section--text">{t("text")}</p>
+      <p className="breakout photo-section--text margin-block-start-l">
+        {t("text")}
+      </p>
       <div className="breakout photos-container">
         <RowsPhotoAlbum
           photos={checkedPhotos}

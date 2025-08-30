@@ -21,7 +21,7 @@
 
 .faq-label {
   font-size: clamp(1.625rem, 0.255vw + 1.569rem, 1.875rem);
-  font-weight: 600;
+  font-weight: 500;
 
   &:hover {
     cursor: pointer;
@@ -56,12 +56,18 @@ div.faq-answer {
 }
 
 @media screen and (width < 800px) {
+  .faqs-section h2 {
+    margin-block-end: 1.5rem;
+  }
   .faqs-container {
     padding-inline-start: 1rem;
   }
 }
 
 @media screen and (width < 600px) {
+  .faqs-section h2 {
+    margin-block-end: 1rem;
+  }
   .faqs-container {
     padding-inline-start: 0;
   }

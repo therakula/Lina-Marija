@@ -4,7 +4,7 @@
 }
 
 .map {
-  margin-block-start: 3rem;
+  margin-block-start: 2rem;
   display: flex;
   justify-content: flex-start;
   gap: 1rem;
@@ -58,7 +58,7 @@
   .map {
     flex-direction: column;
     gap: 2rem;
-    margin-block-start: 2rem;
+    margin-block-start: 1rem;
   }
 
   .map .map-wrapper {

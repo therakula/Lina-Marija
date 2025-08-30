@@ -15,9 +15,9 @@ h1 {
   font-weight: 400;
 }
 h2 {
-  /* min: 68px  max: 92px */
-  font-size: clamp(4.25rem, 1.538vw + 3.904rem, 5.75rem);
-  line-height: 1.1;
+  /* min: 62px  max: 88px */
+  font-size: clamp(3.875rem, 1.625vw + 3.55rem, 5.5rem);
+  line-height: 1;
   word-spacing: 7px;
 }
 

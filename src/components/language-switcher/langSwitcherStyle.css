@@ -9,7 +9,7 @@
 .select[data-direction="vertical"] {
   --flag-width: 40px;
   width: var(--flag-width);
-  max-height: calc((var(--flag-width) * 2 / 3) + 3px);
+  max-height: calc((var(--flag-width) * 2 / 3) + 5px);
   transition: max-height 0.4s ease-in-out;
   flex-direction: column;
   position: absolute;

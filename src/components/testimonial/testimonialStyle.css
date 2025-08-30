@@ -10,9 +10,9 @@
   }
 
   & p {
-    /* min: 20px max: 24px */
-    font-size: clamp(1.25rem, 0.256vw + 1.192rem, 1.5rem);
-    line-height: 1.4;
+    /* min: 19px max: 22px */
+    font-size: clamp(1.313rem, 0.197vw + 1.263rem, 1.5rem);
+    line-height: 1.1;
   }
 }
 
@@ -140,5 +140,9 @@
 @media screen and (width<650px) {
   .testimonial-swiper .swiper-slide {
     padding-inline: 0;
+  }
+
+  .testimonial-section h2 {
+    margin-block-end: 1rem;
   }
 }

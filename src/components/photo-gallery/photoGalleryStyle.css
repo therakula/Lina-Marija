@@ -5,8 +5,11 @@ section.photo-gallery {
 
 .photo-section--title,
 .photo-section--text {
-  margin-block-end: 2rem;
   color: var(--darkColor);
+}
+
+.photo-section--text {
+  padding-block-end: 1rem;
 }
 
 .react-photo-album--button {
