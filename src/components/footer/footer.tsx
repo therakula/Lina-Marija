@@ -29,7 +29,7 @@ const Footer = () => {
             <span>
               <FaPhone className="icon" />{" "}
             </span>
-            <span>069/346-779</span>
+            <span>065/346-7790</span>
           </div>
           <div className="mail">
             <span>

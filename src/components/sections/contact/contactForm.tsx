@@ -120,16 +120,14 @@ const ContactForm = () => {
         ) : (
           <div className="form-wrapper">
             <div className="form-logo--wrapper">
-              <div className="form-logo--wrapper-inner">
-                <Link href="#home" className="contact-logo__link">
-                  <Image
-                    fill
-                    src="/images/logo-2.png"
-                    alt="logo"
-                    className="navigation-logo"
-                  />
-                </Link>
-              </div>
+              <Link href="#home" className="contact-logo__link">
+                <Image
+                  fill
+                  src="/images/contact-form-logo.png"
+                  alt="logo"
+                  className="navigation-logo"
+                />
+              </Link>
             </div>
             <Title as="h4">Lina Marija</Title>
             <form

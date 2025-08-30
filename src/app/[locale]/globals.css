@@ -85,7 +85,7 @@ img {
 }
 
 .layout {
-  --padding-inline: 1.8rem;
+  --padding-inline: 1.2rem;
   --content-max-width: 900px;
   --breakout-max-width: 1200px;
   --images-max-width: 1600px;

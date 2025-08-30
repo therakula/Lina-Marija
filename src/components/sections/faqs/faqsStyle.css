@@ -54,3 +54,15 @@ div.faq-answer {
     color: var(--accentColor);
   }
 }
+
+@media screen and (width < 800px) {
+  .faqs-container {
+    padding-inline-start: 1rem;
+  }
+}
+
+@media screen and (width < 600px) {
+  .faqs-container {
+    padding-inline-start: 0;
+  }
+}
